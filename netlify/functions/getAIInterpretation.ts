@@ -24,7 +24,7 @@ const generationConfig = {
   temperature: 0.7,
   topK: 1,
   topP: 1,
-  maxOutputTokens: 2048, // Diubah sesuai permintaan pengguna
+  maxOutputTokens: 1536, // Diubah sesuai permintaan pengguna
   responseMimeType: 'text/plain',
 };
 

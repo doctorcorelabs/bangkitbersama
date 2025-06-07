@@ -1,8 +1,0 @@
-Initial commit (by create-cloudflare CLI)
-
-Details:
-  C3 = create-cloudflare@2.49.0
-  project name = ai-action-plan-worker
-  package manager = npm@11.1.0
-  wrangler = wrangler@4.19.1
-  git = 2.48.1.windows.1
