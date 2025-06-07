@@ -12,3 +12,9 @@
   command = "npm run build" # Perintah build Anda
   publish = "dist"
   functions = "netlify/functions"
+
+# This is the crucial part for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
