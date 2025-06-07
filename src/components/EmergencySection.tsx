@@ -41,19 +41,19 @@ const EmergencySection = () => {
 
         {/* Emergency Notice */}
         <div className="bg-gradient-to-r from-destructive/20 to-destructive/10 border-l-4 border-destructive rounded-r-xl p-6 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <div className="flex items-start space-x-4">
-            <div className="w-8 h-8 bg-destructive rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+          <div className="flex flex-col items-center text-center space-y-3 sm:flex-row sm:items-start sm:text-left sm:space-x-4 sm:space-y-0">
+            <div className="w-8 h-8 bg-destructive rounded-full flex items-center justify-center flex-shrink-0 sm:mt-1">
               <Phone className="w-4 h-4 text-destructive-foreground" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-foreground mb-2 font-heading">Situasi Darurat?</h3>
-              <p className="text-foreground/80 mb-4 font-sans">
+              <h3 className="text-md sm:text-lg font-bold text-foreground mb-2 font-heading">Situasi Darurat?</h3>
+              <p className="text-sm sm:text-base text-foreground/80 mb-4 font-sans">
                 Jika Anda berada dalam bahaya langsung atau memiliki pikiran untuk menyakiti diri sendiri, 
                 segera hubungi nomor darurat atau pergi ke unit gawat darurat terdekat.
               </p>
               <Button
-                size="lg"
-                className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-semibold font-sans"
+                size="default"
+                className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-semibold font-sans w-full sm:w-auto sm:size-lg"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Hubungi 112 (Darurat Nasional)
@@ -80,7 +80,7 @@ const EmergencySection = () => {
                         <MessageCircle className="w-5 h-5 text-primary-foreground" />
                       )}
                     </div>
-                    <CardTitle className="text-lg font-bold text-card-foreground font-heading">{contact.name}</CardTitle>
+                    <CardTitle className="text-base sm:text-lg font-bold text-card-foreground font-heading">{contact.name}</CardTitle>
                   </div>
                   <div className="flex items-center space-x-1 text-sm text-secondary bg-secondary/10 px-2 py-1 rounded-full">
                     <Clock className="w-3 h-3" />
@@ -89,10 +89,10 @@ const EmergencySection = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-card-foreground/70 font-sans">{contact.description}</p>
+                <p className="text-card-foreground/70 font-sans text-sm sm:text-base">{contact.description}</p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-bold text-lg text-card-foreground font-sans">{contact.number}</p>
+                    <p className="font-bold text-base sm:text-lg text-card-foreground font-sans">{contact.number}</p>
                     <p className="text-sm text-card-foreground/60 font-sans">{contact.availability}</p>
                   </div>
                   <Button
@@ -120,7 +120,7 @@ const EmergencySection = () => {
               href="https://www.halodoc.com/tanya-dokter/kategori/psikolog-klinis"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 py-6 text-lg font-semibold font-sans"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-auto px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg font-semibold font-sans"
             >
               Psikolog
             </a>
@@ -128,7 +128,7 @@ const EmergencySection = () => {
               href="https://www.halodoc.com/tanya-dokter/kategori/psikiater"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-secondary-foreground h-11 px-8 py-6 text-lg font-semibold font-sans"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-secondary-foreground h-auto px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg font-semibold font-sans"
             >
               Psikiater
             </a>

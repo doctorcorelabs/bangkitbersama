@@ -15,9 +15,7 @@ if (!apiKey) {
   console.error('Gemini API key is not set.');
   // Melempar error atau menangani di level handler jika diperlukan agar tidak crash saat load
 }
-const genAI = new GoogleGenAI({
-  apiKey: apiKey || "",
-});
+const genAI = new GoogleGenAI({ apiKey: apiKey || "" });
 
 // Menggunakan model yang lebih umum dan stabil dari SDK
 const modelName = "gemini-2.5-flash-preview-05-20"; 
@@ -26,7 +24,7 @@ const generationConfig = {
   temperature: 0.7,
   topK: 1,
   topP: 1,
-  maxOutputTokens: 20000, // Diubah sesuai permintaan pengguna
+  maxOutputTokens: 2048, // Diubah sesuai permintaan pengguna
   responseMimeType: 'text/plain',
 };
 
@@ -81,7 +79,7 @@ PENTING:
 3.  Fokus pada memberikan pandangan yang konstruktif dan saran praktis yang aman untuk dilakukan secara mandiri (misalnya, teknik relaksasi, aktivitas fisik ringan, menjaga rutinitas).
 4.  Jika ada skor yang sangat tinggi, terutama pada "Pikiran yang Mengganggu", sarankan dengan sangat kuat untuk mencari bantuan profesional atau layanan darurat, namun tetap dengan nada suportif.
 5.  Hindari membuat janji atau klaim yang berlebihan.
-6.  Jaga agar respons tetap ringkas namun informatif, idealnya dalam 2-4 paragraf.
+6.  Jaga agar respons tetap ringkas namun informatif, idealnya dalam 4-5 paragraf.
 7.  Sertakan disclaimer bahwa ini adalah interpretasi AI dan bukan dari tenaga medis profesional.
 8.  Gunakan bahasa Indonesia.
 

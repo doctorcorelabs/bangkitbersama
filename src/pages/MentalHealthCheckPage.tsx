@@ -11,6 +11,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip 
 import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@/components/ui/chart";
 import { Smile, ShieldAlert, Bed, Zap, Utensils, Target, UserCheck, MessageCircleWarning, Users } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 // Definisi skor untuk setiap pilihan jawaban (umum)
 // cqXo1: 0, cqXo2: 1, cqXo3: 2, cqXo4: 3
@@ -272,7 +273,14 @@ const MentalHealthCheckPage: React.FC = () => {
   const [aiInterpretation, setAiInterpretation] = useState<string | null>(null);
   const [isAILoading, setIsAILoading] = useState<boolean>(false);
   const [aiError, setAiError] = useState<string | null>(null);
+  const isMobile = useIsMobile();
 
+  const formatYAxisTick = (tickItem: string) => {
+    if (isMobile && tickItem.length > 12) {
+      return `${tickItem.substring(0, 11)}...`;
+    }
+    return tickItem;
+  };
 
   const handleStartCheck = () => {
     setQuizStarted(true);
@@ -456,31 +464,32 @@ const MentalHealthCheckPage: React.FC = () => {
                   <ChartContainer 
                     config={{
                       score: { label: "Skor", color: "hsl(var(--chart-1))" },
-                    }} 
-                    className="mx-auto aspect-video max-h-[350px]"
+                    }}
+                    className={`mx-auto ${isMobile ? 'h-[380px] w-full' : 'aspect-video max-h-[350px]'}`}
                   >
-                    <BarChart 
-                      accessibilityLayer 
+                    <BarChart
+                      accessibilityLayer
                       data={interpretationResults.map(r => ({ name: r.domainName, score: r.score, maxScore: r.maxScore }))}
                       layout="vertical"
                       margin={{ left: 20, right: 20, top: 5, bottom: 20 }}
                     >
                       <CartesianGrid horizontal={false} vertical={true} strokeDasharray="3 3" />
                       <XAxis type="number" dataKey="score" domain={[0, 'dataMax + 1']} allowDecimals={false} />
-                      <YAxis 
-                        dataKey="name" 
-                        type="category" 
-                        tickLine={false} 
-                        axisLine={false} 
-                        width={150} 
-                        tick={{ fontSize: 12 }} 
+                      <YAxis
+                        dataKey="name"
+                        type="category"
+                        tickLine={false}
+                        axisLine={false}
+                        width={isMobile ? 100 : 150}
+                        tick={{ fontSize: isMobile ? 10 : 12 }}
                         interval={0}
+                        tickFormatter={formatYAxisTick}
                       />
                       <RechartsTooltip
                         cursor={{ fill: 'hsl(var(--muted))' }}
                         content={<ChartTooltipContent indicator="dot" />}
                       />
-                      <Bar dataKey="score" fill="var(--color-score)" radius={4} barSize={20} />
+                      <Bar dataKey="score" fill="var(--color-score)" radius={4} barSize={isMobile ? 16 : 20} />
                     </BarChart>
                   </ChartContainer>
                 </div>
@@ -590,18 +599,18 @@ const MentalHealthCheckPage: React.FC = () => {
             </Button>
           )}
            {showResults && (
-            <div className="flex space-x-4">
+            <div className="flex flex-col space-y-4 items-center sm:flex-row sm:space-y-0 sm:space-x-4 sm:items-stretch">
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-teal-600 text-teal-600 hover:bg-teal-50 hover:text-teal-700 font-semibold py-3 px-8 rounded-md"
+                className="border-teal-600 text-teal-600 hover:bg-teal-50 hover:text-teal-700 font-semibold py-3 px-8 rounded-md w-full sm:w-auto"
                 onClick={handleGoToHome}
               >
                 Kembali ke Beranda
               </Button>
               <Button 
                 size="lg" 
-                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-md"
+                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-md w-full sm:w-auto"
                 onClick={handleStartCheck} // Untuk memulai lagi
               >
                 Ulangi Pemeriksaan
@@ -609,7 +618,7 @@ const MentalHealthCheckPage: React.FC = () => {
               {/* Tombol baru untuk navigasi ke Rencana Aksi Personal */}
               <Button
                 size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-md"
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-md w-full sm:w-auto"
                 onClick={() => {
                   // Membuat ringkasan untuk Rencana Aksi Personal
                   let summary = "Berdasarkan hasil pemeriksaan kondisi mental saya:\n";

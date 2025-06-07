@@ -70,10 +70,10 @@ const FeaturesSection = () => {
             <Sparkles className="w-6 h-6 text-accent mr-2" />
             <span className="text-accent font-semibold uppercase tracking-wide font-sans">Fitur Utama</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-heading">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-heading">
             Perjalanan Kesehatan Mental yang <span className="text-primary">Terpersonalisasi</span>
           </h2>
-          <p className="text-lg text-foreground/70 max-w-3xl mx-auto leading-relaxed font-sans">
+          <p className="text-base sm:text-lg text-foreground/70 max-w-3xl mx-auto leading-relaxed font-sans">
             Dari skrining awal hingga tatalaksana, kami hadir sebagai teman perjalanan digital yang 
             memberdayakan Anda dengan dukungan AI yang cerdas dan empati yang mendalam.
           </p>
@@ -100,13 +100,13 @@ const FeaturesSection = () => {
                 <div className={`w-12 h-12 bg-${feature.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-foreground font-heading">{feature.title}</CardTitle>
+                <CardTitle className="text-lg sm:text-xl font-bold text-foreground font-heading">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <CardDescription className="text-foreground/70 leading-relaxed font-sans text-justify">
+                <CardDescription className="text-sm sm:text-base text-foreground/70 leading-relaxed font-sans text-justify">
                   {feature.description}
                 </CardDescription>
-                <p className="text-sm text-foreground/60 font-sans text-justify">{feature.details}</p>
+                <p className="text-xs sm:text-sm text-foreground/60 font-sans text-justify">{feature.details}</p>
               </CardContent>
             </Card>
           );
@@ -115,18 +115,18 @@ const FeaturesSection = () => {
 
         {/* CTA Section */}
         <div className="text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 sm:p-12 text-primary-foreground shadow-2xl">
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 font-heading">
+          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 sm:p-8 md:p-12 text-primary-foreground shadow-2xl">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-heading">
               Siap Memulai Perjalanan Anda?
             </h3>
-            <p className="text-lg sm:text-xl mb-8 opacity-90 max-w-2xl mx-auto font-sans">
+            <p className="text-base sm:text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto font-sans">
               Ambil langkah pertama menuju pemahaman diri yang lebih baik. 
               Skrining awal hanya membutuhkan 5-10 menit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/cek-kondisi-mental"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-xl text-lg font-semibold ring-offset-background transition-all duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background text-primary hover:bg-background/90 px-8 py-6 font-sans"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-xl text-base sm:text-lg font-semibold ring-offset-background transition-all duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background text-primary hover:bg-background/90 px-6 py-3 sm:px-8 sm:py-4 font-sans w-full sm:w-auto"
               >
                 <Brain className="w-5 h-5 mr-2" />
                 Mulai Skrining Sekarang

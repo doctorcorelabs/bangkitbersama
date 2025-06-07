@@ -15,7 +15,7 @@ const EdukasiPage = () => {
       <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-primary font-heading">
         Video Edukasi Kesehatan Mental
       </h1>
-      <p className="text-center text-muted-foreground mb-10 max-w-3xl mx-auto">
+      <p className="text-muted-foreground mb-10 max-w-3xl mx-auto text-justify">
         Selamat datang di halaman edukasi kami. Di sini Anda akan menemukan kumpulan video yang informatif dan mendukung, dirancang untuk membantu Anda memahami lebih dalam tentang kesehatan mental, strategi pengelolaan stres, dan berbagai teknik untuk meningkatkan kesejahteraan emosional Anda. Kami percaya bahwa pengetahuan adalah langkah pertama menuju perubahan positif. Saksikan video-video pilihan kami untuk memulai perjalanan Anda menuju pikiran yang lebih sehat.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
