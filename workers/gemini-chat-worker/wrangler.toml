@@ -1,0 +1,16 @@
+name = "gemini-chat-worker"
+main = "src/index.ts"
+compatibility_date = "2023-10-30" # Or a more recent date, check Cloudflare docs
+
+[vars]
+# GEMINI_API_KEY will be set as a secret in the Cloudflare dashboard for production
+# For local development, use .dev.vars
+
+# Optional: If you need to specify a specific Node.js version
+# node_compat = true
+
+# Rules for how different file types should be treated by the bundler
+[[rules]]
+type = "Text"
+globs = ["**/*.txt"]
+fallthrough = true # Allow other rules to match if this one doesn't apply specifically enough

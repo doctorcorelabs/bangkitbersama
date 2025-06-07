@@ -1,0 +1,114 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BangkitBersama Design System */
+
+@layer base {
+  :root {
+    --background: 0 0 100; /* White */
+    --foreground: 203 30% 28%; /* Dark Slate (#344E5C) */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 203 30% 28%; /* Dark Slate */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 203 30% 28%; /* Dark Slate */
+
+    --primary: 169 42% 50%; /* Teal Green (#4AB19D) */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 23 76% 58%; /* Warm Orange (#E17A47) */
+    --secondary-foreground: 203 30% 28%; /* Dark Slate */
+
+    --muted: 203 30% 90%; /* Lighter shade of Dark Slate for muted backgrounds */
+    --muted-foreground: 203 30% 45%; /* Slightly lighter Dark Slate for muted text */
+
+    --accent: 45 85% 67%; /* Golden Yellow (#EFC958) */
+    --accent-foreground: 203 30% 28%; /* Dark Slate */
+
+    --destructive: 350 85% 62%; /* Vibrant Pink (#EF3D59) */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 203 30% 85%; /* Very light shade of Dark Slate */
+    --input: 203 30% 85%; /* Very light shade of Dark Slate */
+    --ring: 169 42% 50%; /* Teal Green (#4AB19D) for focus rings */
+
+    --radius: 0.5rem;
+
+    /* New Custom Palette */
+    --vibrant-pink: 350 85% 62%; /* #EF3D59 */
+    --warm-orange: 23 76% 58%; /* #E17A47 */
+    --golden-yellow: 45 85% 67%; /* #EFC958 */
+    --teal-green: 169 42% 50%; /* #4AB19D */
+    --dark-slate: 203 30% 28%; /* #344E5C */
+    
+    /* Retaining for potential direct use if needed, though Tailwind prefers semantic */
+    --brand-pink: 350 85% 62%;
+    --brand-orange: 23 76% 58%;
+    --brand-yellow: 45 85% 67%;
+    --brand-teal: 169 42% 50%;
+    --brand-slate: 203 30% 28%;
+  }
+
+  .dark {
+    --background: 203 30% 20%; /* Darker Slate for dark mode background */
+    --foreground: 0 0% 95%; /* Off-white for dark mode text */
+
+    --card: 203 30% 25%; /* Slightly lighter Slate for cards in dark mode */
+    --card-foreground: 0 0% 95%; /* Off-white */
+
+    --popover: 203 30% 15%; /* Even darker Slate for popovers */
+    --popover-foreground: 0 0% 95%; /* Off-white */
+
+    --primary: 169 42% 50%; /* Teal Green - can remain same or be brightened slightly */
+    --primary-foreground: 203 30% 10%; /* Very dark slate for contrast on primary */
+
+    --secondary: 23 76% 58%; /* Warm Orange - can remain same or be brightened slightly */
+    --secondary-foreground: 203 30% 10%; /* Very dark slate for contrast on secondary */
+
+    --muted: 203 30% 30%; /* Darker muted background */
+    --muted-foreground: 203 30% 65%; /* Lighter muted foreground */
+
+    --accent: 45 85% 67%; /* Golden Yellow - can remain same or be brightened slightly */
+    --accent-foreground: 203 30% 10%; /* Very dark slate for contrast on accent */
+
+    --destructive: 350 85% 62%; /* Vibrant Pink - can remain same or be brightened slightly */
+    --destructive-foreground: 0 0% 95%; /* Off-white */
+
+    --border: 203 30% 40%; /* Darker border */
+    --input: 203 30% 40%; /* Darker input background */
+    --ring: 169 42% 55%; /* Slightly brighter Teal for focus rings in dark mode */
+
+    /* New Custom Palette for Dark Mode (can be same or adjusted) */
+    --vibrant-pink: 350 85% 62%;
+    --warm-orange: 23 76% 58%;
+    --golden-yellow: 45 85% 67%;
+    --teal-green: 169 42% 50%;
+    --dark-slate: 203 30% 28%; /* This variable itself might not be used directly for fg/bg in dark */
+
+    --brand-pink: 350 85% 62%;
+    --brand-orange: 23 76% 58%;
+    --brand-yellow: 45 85% 67%;
+    --brand-teal: 169 42% 50%;
+    --brand-slate: 203 30% 28%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Removed old utility classes like .soft-blue, .bg-sage-green etc. */
+/* Tailwind will generate new utilities based on the updated tailwind.config.ts */
+@layer utilities {
+
+}

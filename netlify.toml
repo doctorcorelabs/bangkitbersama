@@ -1,0 +1,14 @@
+[dev]
+  command = "npm run dev" # Perintah untuk menjalankan Vite (sesuai package.json Anda)
+  port = 8888 # Port untuk Netlify Dev
+  targetPort = 8080 # Port tempat Vite Anda berjalan
+  publish = "dist" # Direktori output build Vite Anda
+  framework = "vite"
+
+[functions]
+  directory = "netlify/functions"
+
+[build]
+  command = "npm run build" # Perintah build Anda
+  publish = "dist"
+  functions = "netlify/functions"
