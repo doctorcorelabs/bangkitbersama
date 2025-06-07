@@ -1,0 +1,20 @@
+name = "get-all-interpretation-worker"
+main = "src/index.ts"
+compatibility_date = "2024-06-07" # You can update this to the current date
+nodejs_compat = true # Replaces legacy node_compat
+
+# Define any bindings here, for example, secrets:
+# [[vars]]
+# name = "GEMINI_API_KEY"
+# value = "YOUR_GEMINI_API_KEY_HERE_VIA_WRANGLER_SECRET" # This is a placeholder. Set it using `wrangler secret put GEMINI_API_KEY`
+
+# Example for KV Namespaces (if needed in the future):
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# Example for D1 Databases (if needed in the future):
+# [[d1_databases]]
+# binding = "DB" # i.e. env.DB
+# database_name = "my-database"
+# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"

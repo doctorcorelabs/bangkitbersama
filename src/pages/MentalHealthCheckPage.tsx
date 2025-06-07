@@ -348,7 +348,7 @@ const MentalHealthCheckPage: React.FC = () => {
     setAiInterpretation(null);
 
     try {
-      const response = await fetch('/.netlify/functions/getAIInterpretation', {
+      const response = await fetch('https://get-all-interpretation-worker.daivanfebrijuansetiya.workers.dev', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

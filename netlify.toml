@@ -5,13 +5,9 @@
   publish = "dist" # Direktori output build Vite Anda
   framework = "vite"
 
-[functions]
-  directory = "netlify/functions"
-
 [build]
   command = "npm run build" # Perintah build Anda
   publish = "dist"
-  functions = "netlify/functions"
 
 # This is the crucial part for SPA routing
 [[redirects]]
