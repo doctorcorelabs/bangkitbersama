@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { useLocation, Link } from "react-router-dom"; // Import Link
 import { Loader2 } from "lucide-react"; // For loading spinner
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { useTranslation } from "react-i18next";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -20,21 +21,23 @@ interface InterpretationResult {
 }
 
 const RencanaAksiPersonalPage = () => {
+  const { t, i18n } = useTranslation();
   const [assessmentSummaryText, setAssessmentSummaryText] = useState("");
   const [inputText, setInputText] = useState(""); // This will now be for user's additional input
   const [generatedPlan, setGeneratedPlan] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [displayedResources, setDisplayedResources] = useState<typeof availableResources>([]);
   const abortControllerRef = useRef<AbortController | null>(null);
   const location = useLocation();
 
-  const availableResources = [
-    { id: 'mindfulness-breathing', name: "Latihan Pernapasan Mindfulness", path: "/exercises/mindfulness-breathing", relevantThemes: ["kecemasan", "stres", "pola tidur", "suasana hati & minat"] },
-    { id: 'progressive-muscle-relaxation', name: "Latihan Relaksasi Otot Progresif", path: "/exercises/progressive-muscle-relaxation", relevantThemes: ["kecemasan", "stres", "pola tidur"] },
-    { id: 'managing-anxiety-article', name: "Artikel Mengelola Kecemasan", path: "/education/managing-anxiety", relevantThemes: ["kecemasan", "stres", "pikiran yang mengganggu"] },
-    { id: 'cbt-introduction-article', name: "Panduan Pengantar CBT", path: "/education/cbt-introduction", relevantThemes: ["kecemasan", "stres", "suasana hati & minat", "pikiran yang mengganggu"] }
-  ];
+  const availableResources = useMemo(() => [
+    { id: 'mindfulness-breathing', name: t('actionPlan.resources.mindfulnessBreathing'), path: "/exercises/mindfulness-breathing", relevantThemes: ["kecemasan", "stres", "pola tidur", "suasana hati & minat"] },
+    { id: 'progressive-muscle-relaxation', name: t('actionPlan.resources.progressiveMuscleRelaxation'), path: "/exercises/progressive-muscle-relaxation", relevantThemes: ["kecemasan", "stres", "pola tidur"] },
+    { id: 'managing-anxiety-article', name: t('actionPlan.resources.managingAnxietyArticle'), path: "/education/managing-anxiety", relevantThemes: ["kecemasan", "stres", "pikiran yang mengganggu"] },
+    { id: 'cbt-introduction-article', name: t('actionPlan.resources.cbtIntroductionArticle'), path: "/education/cbt-introduction", relevantThemes: ["kecemasan", "stres", "suasana hati & minat", "pikiran yang mengganggu"] }
+  ], [t]);
+
+  const [displayedResources, setDisplayedResources] = useState(availableResources);
 
   useEffect(() => {
     if (location.state?.assessmentSummary) {
@@ -79,15 +82,15 @@ const RencanaAksiPersonalPage = () => {
       // If no rawResults (e.g. user navigated directly), show all resources
       setDisplayedResources(availableResources);
     }
-  }, [location.state]);
+  }, [location.state, availableResources]);
 
   const workerUrl = "https://ai-action-plan-worker.daivanfebrijuansetiya.workers.dev/api/generate-action-plan";
 
   const handleGeneratePlan = async () => {
-    const combinedInput = `${assessmentSummaryText ? `Ringkasan Hasil Asesmen Sebelumnya:\n${assessmentSummaryText}\n\n` : ''}Input Tambahan Pengguna:\n${inputText}`;
+    const combinedInput = `${assessmentSummaryText ? `${t('actionPlan.assessmentSummaryLabel')}:\n${assessmentSummaryText}\n\n` : ''}${t('actionPlan.userInputLabel')}:\n${inputText}`;
     
     if (!inputText.trim() && !assessmentSummaryText.trim()) {
-      setError("Mohon masukkan deskripsi situasi atau perasaan Anda, atau pastikan ada hasil asesmen sebelumnya.");
+      setError(t('actionPlan.errorInputRequired'));
       return;
     }
     if (!inputText.trim() && assessmentSummaryText.trim()) {
@@ -116,7 +119,10 @@ const RencanaAksiPersonalPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ inputText: combinedInput.trim() }),
+        body: JSON.stringify({ 
+          inputText: combinedInput.trim(),
+          language: i18n.language 
+        }),
         signal: abortControllerRef.current.signal,
       });
 
@@ -146,10 +152,10 @@ const RencanaAksiPersonalPage = () => {
     } catch (err) {
       if (err.name === 'AbortError') {
         console.log('Fetch aborted');
-        setError("Proses dibatalkan.");
+        setError(t('actionPlan.errorProcessCancelled'));
       } else {
         console.error("Error generating plan:", err);
-        setError(err.message || "Terjadi kesalahan saat membuat rencana aksi.");
+        setError(err.message || t('actionPlan.errorGeneric'));
       }
     } finally {
       setIsLoading(false);
@@ -161,7 +167,7 @@ const RencanaAksiPersonalPage = () => {
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
       setIsLoading(false);
-      setError("Pembuatan rencana dibatalkan.");
+      setError(t('actionPlan.errorPlanCancelled'));
     }
   };
 
@@ -169,18 +175,17 @@ const RencanaAksiPersonalPage = () => {
     <div className="container mx-auto py-8 px-4 md:px-6 lg:px-8 flex flex-col items-center">
       <div className="w-full max-w-2xl">
         <h1 className="text-3xl font-bold text-center mb-2 text-primary font-heading">
-          Rencana Aksi Personal Anda
+          {t('actionPlan.title')}
         </h1>
         <p className="text-center text-muted-foreground mb-8">
-          Deskripsikan situasi, perasaan, atau tantangan yang sedang Anda hadapi.
-          AI akan membantu membuatkan rencana aksi yang dipersonalisasi untuk Anda.
+          {t('actionPlan.description')}
         </p>
 
         <div className="space-y-6">
           {assessmentSummaryText && (
             <Card className="bg-slate-50">
               <CardHeader>
-                <CardTitle className="text-lg text-slate-700">Ringkasan Hasil Pemeriksaan Anda Sebelumnya</CardTitle>
+                <CardTitle className="text-lg text-slate-700">{t('actionPlan.assessmentSummaryTitle')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <pre className="whitespace-pre-wrap text-sm text-slate-600 p-3 bg-slate-100 rounded-md max-h-60 overflow-y-auto">
@@ -192,11 +197,11 @@ const RencanaAksiPersonalPage = () => {
 
           <div>
             <label htmlFor="userInput" className="block text-sm font-medium text-gray-700 mb-1">
-              {assessmentSummaryText ? "Tambahkan detail atau fokus spesifik Anda di sini:" : "Deskripsikan situasi, perasaan, atau tantangan Anda:"}
+              {assessmentSummaryText ? t('actionPlan.addDetailsLabel') : t('actionPlan.describeSituationLabel')}
             </label>
             <Textarea
               id="userInput"
-              placeholder="Contoh: Saya ingin fokus mengatasi kesulitan tidur dan rasa cemas berlebih saat presentasi di kantor..."
+              placeholder={t('actionPlan.placeholder')}
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
               rows={5}
@@ -214,10 +219,10 @@ const RencanaAksiPersonalPage = () => {
               {isLoading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Membuat Rencana...
+                  {t('actionPlan.generatingButton')}
                 </>
               ) : (
-                "Buat Rencana Aksi"
+                t('actionPlan.generateButton')
               )}
             </Button>
             {isLoading && (
@@ -226,7 +231,7 @@ const RencanaAksiPersonalPage = () => {
                 variant="outline"
                 className="w-full sm:w-auto"
               >
-                Batal
+                {t('actionPlan.cancelButton')}
               </Button>
             )}
           </div>
@@ -234,9 +239,9 @@ const RencanaAksiPersonalPage = () => {
 
         {generatedPlan && !isLoading && (
           <div className="mt-8 p-6 border rounded-lg bg-card shadow">
-            <h2 className="text-2xl font-semibold mb-4 text-primary font-heading">Rencana Aksi Anda:</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-primary font-heading">{t('actionPlan.yourPlanTitle')}</h2>
             <div
-              className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none text-card-foreground text-justify" // Added text-justify
+              className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none text-card-foreground text-justify"
             >
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
@@ -264,7 +269,7 @@ const RencanaAksiPersonalPage = () => {
 
         {generatedPlan && !isLoading && displayedResources.length > 0 && (
           <div className="mt-8 pt-6 border-t">
-            <h3 className="text-xl font-semibold mb-4 text-gray-700">Sumber Daya Terkait yang Mungkin Membantu:</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-700">{t('actionPlan.relatedResourcesTitle')}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {displayedResources.map(resource => (
                 <Link to={resource.path} key={resource.id} className="w-full">

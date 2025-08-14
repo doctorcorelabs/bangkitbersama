@@ -40,31 +40,41 @@ const openapi = fromHono(app, {
 // New endpoint for Personal Action Plan
 app.post('/api/generate-action-plan', async (c) => {
 	try {
-		const { inputText } = await c.req.json();
+		const { inputText, language } = await c.req.json();
 
 		if (!inputText || typeof inputText !== 'string') {
 			return c.json({ error: 'inputText is required and must be a string' }, 400);
 		}
 
+		const lang = language === 'en' ? 'en' : 'id'; // Default to Indonesian
+
+		const systemPrompt = `You are a compassionate and supportive AI mental health assistant for the "Mynd" application. Your role is to generate a personalized, actionable, and empathetic action plan based on the user's input. The user's input may contain a mix of languages (English and Indonesian), as it includes a summary from a previous assessment and their own additional notes.
+
+**CRITICAL INSTRUCTION:**
+No matter what language the user's input is in, you MUST generate the ENTIRE action plan exclusively in the target language specified below. Do not mix languages in your response.
+
+**Target Language: ${lang === 'en' ? 'English' : 'Bahasa Indonesia'}**
+
+**Response Guidelines:**
+1.  **Structure:** Organize the plan with clear headings (using markdown '###'), bullet points ('*' or '-'), and bold text ('**text**') for emphasis.
+2.  **Tone:** Be empathetic, non-judgmental, and encouraging.
+3.  **Content:** Provide practical, evidence-informed steps. Suggest small, manageable actions. If the user mentions severe distress (e.g., self-harm, crisis), the absolute first priority is to strongly and clearly advise them to seek immediate professional help and provide them with generic emergency contact information (e.g., "contact emergency services like 119 in Indonesia or 911 in the US", "look up local crisis hotlines").
+4.  **Formatting:** Use markdown for all formatting. Do not output plain text.
+5.  **Language:** Adhere strictly to the specified **Target Language** for your entire response.`;
+
 		const ai = new GoogleGenAI({ apiKey: c.env.GEMINI_API_KEY });
-		const modelName = 'gemini-2.5-flash-preview-05-20';
+		const modelName = 'gemini-2.0-flash'; // Use a model known for strong instruction-following
 		
-		const contents = [{ role: 'user', parts: [{ text: inputText }] }];
+		// For this SDK version, combine system prompt with user input.
+		const fullPrompt = `${systemPrompt}\n\n---\n\nUSER INPUT:\n${inputText}`;
 
-		// System instruction and safety settings are removed for now due to persistent TS errors.
-		// We need to consult SDK documentation for the correct way to apply these with streaming.
+		const contents = [{ role: 'user', parts: [{ text: fullPrompt }] }];
 
-		// Simple config object as per the user's original working snippet
-		const simpleConfig = {
-			responseMimeType: 'text/plain',
-			// maxOutputTokens: 20000, // Temporarily removing, will add back once base call works
-		};
-
-		// Call ai.models.generateContentStream with the minimal parameters from the user's snippet
+		// Call ai.models.generateContentStream
 		const streamResult = await ai.models.generateContentStream({
 			model: modelName,
 			contents,
-			config: simpleConfig,
+			// The 'config' property is not valid here, generationConfig is needed for the model object, not the stream call
 		});
 
 		// Transform the AI's stream into a Hono-compatible ReadableStream of text chunks

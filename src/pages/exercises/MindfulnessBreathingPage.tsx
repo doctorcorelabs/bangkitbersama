@@ -1,19 +1,67 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Zap, Wind, Smile, Brain, Clock, Lightbulb, CheckCircle } from "lucide-react";
 
 const MindfulnessBreathingPage: React.FC = () => {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      step: 1,
+      title: t('mindfulness.steps.1.title'),
+      description: t('mindfulness.steps.1.description'),
+      icon: <Smile className="w-8 h-8 text-teal-600" />
+    },
+    {
+      step: 2,
+      title: t('mindfulness.steps.2.title'),
+      description: t('mindfulness.steps.2.description'),
+      icon: <Clock className="w-8 h-8 text-teal-600" />
+    },
+    {
+      step: 3,
+      title: t('mindfulness.steps.3.title'),
+      description: t('mindfulness.steps.3.description'),
+      icon: <Wind className="w-8 h-8 text-teal-600" />
+    },
+    {
+      step: 4,
+      title: t('mindfulness.steps.4.title'),
+      description: t('mindfulness.steps.4.description'),
+      icon: <Lightbulb className="w-8 h-8 text-teal-600" />
+    },
+    {
+      step: 5,
+      title: t('mindfulness.steps.5.title'),
+      description: t('mindfulness.steps.5.description'),
+      icon: <Brain className="w-8 h-8 text-teal-600" />
+    },
+    {
+      step: 6,
+      title: t('mindfulness.steps.6.title'),
+      description: t('mindfulness.steps.6.description'),
+      icon: <Clock className="w-8 h-8 text-teal-600" />
+    },
+    {
+      step: 7,
+      title: t('mindfulness.steps.7.title'),
+      description: t('mindfulness.steps.7.description'),
+      icon: <Smile className="w-8 h-8 text-teal-600" />
+    }
+  ];
+
   return (
     <div className="container mx-auto py-8 px-4 md:px-6 lg:px-8">
       <header className="mb-12 text-center">
         <h1 className="text-4xl font-bold text-primary font-heading mb-3">
           <Wind className="inline-block w-10 h-10 mr-3 text-teal-500" />
-          Latihan Pernapasan Mindfulness
+          {t('mindfulness.title')}
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Temukan ketenangan dan fokus melalui latihan pernapasan sederhana yang bisa Anda lakukan di mana saja dan kapan saja.
+          {t('mindfulness.subtitle')}
         </p>
       </header>
 
@@ -22,16 +70,12 @@ const MindfulnessBreathingPage: React.FC = () => {
           <CardHeader>
             <CardTitle className="text-2xl text-teal-700 flex items-center">
               <Brain className="w-7 h-7 mr-2" />
-              Apa itu Pernapasan Mindfulness?
+              {t('mindfulness.whatIs.title')}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-gray-700 text-justify">
-            <p>
-              Pernapasan mindfulness adalah praktik memusatkan perhatian secara penuh pada sensasi napas Anda saat ini, tanpa menghakimi. Ini bukan tentang mengubah cara Anda bernapas, melainkan mengamati proses alami pernapasan Anda.
-            </p>
-            <p>
-              Dengan melatih kesadaran pada napas, Anda melatih pikiran untuk lebih tenang, fokus, dan hadir sepenuhnya pada momen saat ini.
-            </p>
+            <p>{t('mindfulness.whatIs.p1')}</p>
+            <p>{t('mindfulness.whatIs.p2')}</p>
           </CardContent>
         </Card>
 
@@ -39,16 +83,16 @@ const MindfulnessBreathingPage: React.FC = () => {
           <CardHeader>
             <CardTitle className="text-2xl text-teal-700 flex items-center">
               <Zap className="w-7 h-7 mr-2" />
-              Manfaat Latihan Ini
+              {t('mindfulness.benefits.title')}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-2 text-gray-700">
             <ul className="list-disc list-inside space-y-2">
-              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>Mengurangi stres dan kecemasan.</span></li>
-              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>Meningkatkan fokus dan konsentrasi.</span></li>
-              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>Membantu menenangkan sistem saraf.</span></li>
-              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>Meningkatkan kesadaran diri (self-awareness).</span></li>
-              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>Dapat membantu meningkatkan kualitas tidur.</span></li>
+              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>{t('mindfulness.benefits.b1')}</span></li>
+              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>{t('mindfulness.benefits.b2')}</span></li>
+              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>{t('mindfulness.benefits.b3')}</span></li>
+              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>{t('mindfulness.benefits.b4')}</span></li>
+              <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" /><span>{t('mindfulness.benefits.b5')}</span></li>
             </ul>
           </CardContent>
         </Card>
@@ -57,64 +101,21 @@ const MindfulnessBreathingPage: React.FC = () => {
       <Card className="mt-12 shadow-xl">
         <CardHeader>
           <CardTitle className="text-3xl text-center font-semibold text-primary mb-2">
-            Langkah-langkah Latihan
+            {t('mindfulness.steps.title')}
           </CardTitle>
           <CardDescription className="text-center text-muted-foreground">
-            Ikuti langkah-langkah sederhana ini untuk memulai.
+            {t('mindfulness.steps.subtitle')}
           </CardDescription>
         </CardHeader>
         <CardContent className="px-6 py-8 md:px-10">
           <div className="space-y-8">
-            {[
-              {
-                step: 1,
-                title: "Temukan Posisi Nyaman",
-                description: "Duduklah dengan nyaman di kursi dengan punggung tegak namun bahu rileks. Anda juga bisa berbaring jika itu lebih nyaman. Pastikan Anda tidak akan terganggu selama beberapa menit.",
-                icon: <Smile className="w-8 h-8 text-teal-600" />
-              },
-              {
-                step: 2,
-                title: "Pejamkan Mata (Opsional)",
-                description: "Pejamkan mata Anda dengan lembut. Jika Anda tidak nyaman memejamkan mata, cukup arahkan pandangan Anda ke bawah dengan lembut, sekitar satu meter di depan Anda, tanpa fokus pada apapun.",
-                icon: <Clock className="w-8 h-8 text-teal-600" /> // Placeholder, consider better icon
-              },
-              {
-                step: 3,
-                title: "Amati Napas Anda",
-                description: "Alihkan perhatian Anda ke napas. Rasakan sensasi udara yang masuk dan keluar dari tubuh Anda. Perhatikan di mana Anda paling merasakan napas: mungkin di lubang hidung, tenggorokan, dada, atau perut.",
-                icon: <Wind className="w-8 h-8 text-teal-600" />
-              },
-              {
-                step: 4,
-                title: "Jangan Mengubah, Hanya Amati",
-                description: "Tidak perlu mengubah cara Anda bernapas. Biarkan napas mengalir secara alami. Tugas Anda hanyalah mengamati, menjadi saksi dari setiap tarikan dan hembusan napas.",
-                icon: <Lightbulb className="w-8 h-8 text-teal-600" /> // Placeholder
-              },
-              {
-                step: 5,
-                title: "Kembali Saat Pikiran Berkelana",
-                description: "Pikiran Anda pasti akan berkelana – ini sangat normal. Saat Anda menyadari pikiran Anda tidak lagi pada napas, akui ke mana pikiran itu pergi, lalu dengan lembut kembalikan perhatian Anda ke sensasi napas.",
-                icon: <Brain className="w-8 h-8 text-teal-600" />
-              },
-              {
-                step: 6,
-                title: "Lakukan Selama Beberapa Menit",
-                description: "Mulailah dengan 3-5 menit. Anda bisa menggunakan timer jika mau. Seiring waktu, Anda bisa menambah durasinya jika merasa nyaman.",
-                icon: <Clock className="w-8 h-8 text-teal-600" />
-              },
-              {
-                step: 7,
-                title: "Akhiri dengan Lembut",
-                description: "Setelah selesai, luangkan waktu sejenak untuk memperhatikan bagaimana perasaan tubuh dan pikiran Anda. Buka mata Anda perlahan (jika terpejam) dan bawa kesadaran ini ke aktivitas Anda selanjutnya.",
-                icon: <Smile className="w-8 h-8 text-teal-600" />
-              }
-            ].map((item) => (
+            {steps.map((item) => (
               <div key={item.step} className="flex items-start space-x-6 p-4 rounded-lg hover:bg-teal-50 transition-colors duration-200">
                 <div className="flex-shrink-0 mt-1 bg-teal-100 p-3 rounded-full">
                   {item.icon}
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold text-gray-800 mb-1">Langkah {item.step}: {item.title}</h4>
+                  <h4 className="text-xl font-semibold text-gray-800 mb-1">{t('mindfulness.steps.stepLabel', { step: item.step })}: {item.title}</h4>
                   <p className="text-gray-600 text-justify">{item.description}</p>
                 </div>
               </div>
@@ -127,7 +128,7 @@ const MindfulnessBreathingPage: React.FC = () => {
         <CardHeader>
           <CardTitle className="text-2xl text-teal-700 flex items-center">
             <Lightbulb className="w-7 h-7 mr-2" />
-            Tips Tambahan
+            {t('mindfulness.tips.title')}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-3 text-gray-700 text-justify">
@@ -135,7 +136,7 @@ const MindfulnessBreathingPage: React.FC = () => {
             <CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" />
             <div className="prose prose-sm max-w-none">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {"**Konsistensi adalah kunci.** Lebih baik berlatih beberapa menit setiap hari daripada lama tapi jarang."}
+                {t('mindfulness.tips.t1')}
               </ReactMarkdown>
             </div>
           </div>
@@ -143,7 +144,7 @@ const MindfulnessBreathingPage: React.FC = () => {
             <CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" />
             <div className="prose prose-sm max-w-none">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {"**Bersikaplah lembut pada diri sendiri.** Tidak ada 'cara yang salah' dalam bermindfulness. Proses belajar adalah bagiannya."}
+                {t('mindfulness.tips.t2')}
               </ReactMarkdown>
             </div>
           </div>
@@ -151,7 +152,7 @@ const MindfulnessBreathingPage: React.FC = () => {
             <CheckCircle className="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" />
             <div className="prose prose-sm max-w-none">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {"Anda bisa melakukan latihan ini **kapan saja** Anda merasa butuh jeda atau merasa stres."}
+                {t('mindfulness.tips.t3')}
               </ReactMarkdown>
             </div>
           </div>

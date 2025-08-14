@@ -1,8 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { Brain, Heart, Shield, Users } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="beranda" className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-background to-brand-teal/10 overflow-hidden">
       {/* Background decorative elements */}
@@ -18,17 +20,16 @@ const HeroSection = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight font-heading">
-                <span className="text-primary">Temukan</span> Ketenangan,{" "}
-                <span className="text-secondary">Kenali</span> Diri
+                <span className="text-primary">{t('find_peace')}</span>,{" "}
+                <span className="text-secondary">{t('know_yourself')}</span>
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground font-heading">
-                <span className="text-accent">Bangkit</span> Bersama Kami
+                <span className="text-accent">{t('rise_with_us')}</span>
               </h2>
             </div>
 
             <p className="text-base sm:text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl font-sans text-justify">
-              BangkitBersama adalah teman perjalanan digital yang memberdayakan Anda untuk memahami kondisi mental, 
-              mengambil langkah proaktif, dan merasa tidak sendirian dalam perjalanan menuju kesehatan mental yang lebih baik.
+              {t('hero_description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -38,7 +39,7 @@ const HeroSection = () => {
                   className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-xl transition-all duration-300 transform hover:scale-105 font-sans w-full sm:w-auto"
                 >
                   <Brain className="w-5 h-5 mr-2" />
-                  Mulai Cek Kondisi
+                  {t('start_check')}
                 </Button>
               </a>
 
@@ -48,7 +49,7 @@ const HeroSection = () => {
                   size="default"
                   className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-semibold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-xl transition-all duration-300 font-sans w-full sm:w-auto"
                 >
-                  Pelajari Lebih Lanjut
+                  {t('learn_more')}
                 </Button>
               </a>
             </div>
@@ -57,15 +58,15 @@ const HeroSection = () => {
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4">
               <div className="flex items-center space-x-2 text-sm text-foreground/70">
                 <Shield className="w-4 h-4 text-secondary" />
-                <span>Privasi Terjaga</span>
+                <span>{t('privacy_protected')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-foreground/70">
                 <Users className="w-4 h-4 text-destructive" />
-                <span>Integrasi Mitra</span>
+                <span>{t('partner_integration')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-foreground/70">
                 <Brain className="w-4 h-4 text-primary" />
-                <span>Didukung AI</span>
+                <span>{t('ai_supported')}</span>
               </div>
             </div>
           </div>
@@ -120,9 +121,7 @@ const HeroSection = () => {
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="bg-brand-yellow/10 border border-brand-yellow/30 rounded-xl p-4 sm:p-6 text-center">
             <p className="text-sm text-foreground/80 font-medium">
-              <strong>Peringatan Penting:</strong> BangkitBersama adalah platform edukasi dan skrining awal. 
-              Hasil yang ditampilkan bukanlah diagnosis medis. Untuk diagnosis dan penanganan lebih lanjut, 
-              harap hubungi psikolog atau psikiater profesional.
+              <strong>{t('important_warning')}</strong>
             </p>
           </div>
         </div>

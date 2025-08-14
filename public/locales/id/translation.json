@@ -1,0 +1,470 @@
+{
+  "welcome": "Selamat Datang di Mynd",
+  "find_peace": "Temukan Ketenangan",
+  "know_yourself": "Kenali Diri",
+  "rise_with_us": "Bangkit Bersama Kami",
+  "hero_description": "Mynd adalah teman perjalanan digital yang memberdayakan Anda untuk memahami kondisi mental, mengambil langkah proaktif, dan merasa tidak sendirian dalam perjalanan menuju kesehatan mental yang lebih baik.",
+  "start_check": "Mulai Cek Kondisi",
+  "learn_more": "Pelajari Lebih Lanjut",
+  "privacy_protected": "Privasi Terjaga",
+  "partner_integration": "Integrasi Mitra",
+  "ai_supported": "Didukung AI",
+  "important_warning": "Peringatan Penting: Mynd adalah platform edukasi dan skrining awal. Hasil yang ditampilkan bukanlah diagnosis medis. Untuk diagnosis dan penanganan lebih lanjut, harap hubungi psikolog atau psikiater profesional.",
+  "home": "Beranda",
+  "check_condition": "Cek Kondisi",
+  "action_plan": "Rencana Aksi",
+  "education": "Edukasi",
+  "footer_brand": "Mynd",
+  "footer_description": "Teman perjalanan digital untuk kesehatan mental yang lebih baik. Temukan ketenangan, kenali diri, bangkit bersama kami.",
+  "footer_copyright": "© 2025 Mynd. Semua hak dilindungi. (Author Daivan Febri Juan Setiya)",
+  "main_feature": "Fitur Utama",
+  "feature_title": "Perjalanan Kesehatan Mental yang Terpersonalisasi",
+  "feature_description": "Dari skrining awal hingga tatalaksana, kami hadir sebagai teman perjalanan digital yang memberdayakan Anda dengan dukungan AI yang cerdas dan empati yang mendalam.",
+  "screening_title": "Skrining Cepat & Adaptif",
+  "screening_description": "Mulailah perjalanan kesehatan mental Anda dengan skrining awal yang cerdas dan adaptif. Sistem kami menggunakan kecerdasan buatan untuk mengajukan pertanyaan yang relevan dengan kondisi Anda, memastikan proses skrining yang personal dan efisien. Hasil skrining ini akan menjadi dasar untuk rekomendasi dan rencana aksi yang disesuaikan.",
+  "screening_details": "Dapatkan pemahaman awal mengenai kondisi mental Anda melalui serangkaian pertanyaan yang dirancang secara klinis dan disajikan dalam format percakapan yang nyaman dan mudah diikuti.",
+  "analysis_title": "Analisis Mendalam dengan AI",
+  "analysis_description": "Manfaatkan kekuatan analisis Natural Language Processing (NLP) untuk menggali pemahaman yang lebih mendalam tentang pola pikir dan dinamika emosi Anda. Fitur jurnal interaktif kami membantu Anda merefleksikan pengalaman sehari-hari, sementara AI bekerja di latar belakang untuk mendeteksi sentimen, mengekstraksi tema kunci, dan mengidentifikasi potensi distorsi kognitif.",
+  "analysis_details": "AI kami secara otomatis menganalisis entri jurnal Anda untuk memberikan wawasan berharga mengenai tren emosi, tema yang sering muncul dalam pikiran Anda, serta membantu mengenali pola pikir yang mungkin kurang membantu.",
+  "action_plan_title": "Rencana Aksi Personal",
+  "action_plan_description": "Berdasarkan hasil skrining dan analisis mendalam, Mynd menyusun rencana aksi yang dipersonalisasi khusus untuk Anda. Rencana ini mencakup rekomendasi konten edukatif, latihan mandiri berbasis bukti seperti Cognitive Behavioral Therapy (CBT) dan mindfulness, serta fitur pelacak suasana hati (mood tracker) untuk mendukung proses pemulihan yang terstruktur dan berkelanjutan.",
+  "action_plan_details": "Akses berbagai latihan praktis seperti teknik CBT untuk mengubah pola pikir negatif, latihan mindfulness untuk meningkatkan kesadaran diri, dan pantau perkembangan suasana hati Anda secara berkala.",
+  "education_title": "Edukasi Kesehatan Mental",
+  "education_description": "Tingkatkan pemahaman Anda tentang kesehatan mental melalui perpustakaan konten edukatif kami yang kaya dan mudah diakses. Kami menyediakan beragam artikel informatif, video menarik, dan infografis yang dirancang untuk menjelaskan berbagai topik kesehatan mental secara komprehensif namun tetap ringan dan mudah dicerna.",
+  "education_details": "Pelajari lebih lanjut tentang berbagai kondisi mental, strategi pengelolaan stres, tips menjaga kesejahteraan emosional, dan cara efektif untuk melawan stigma negatif seputar kesehatan mental.",
+  "professional_title": "Hubungan dengan Profesional",
+  "professional_description": "Jika Anda memerlukan dukungan lebih lanjut, Mynd memfasilitasi Anda untuk terhubung dengan jaringan psikolog dan konselor profesional yang terverifikasi. Kami juga membantu menyiapkan ringkasan kondisi Anda berdasarkan data di aplikasi untuk mempermudah sesi konsultasi awal Anda, sehingga Anda bisa mendapatkan bantuan yang tepat dengan lebih cepat.",
+  "professional_details": "Jelajahi direktori profesional kami, manfaatkan fitur penjadwalan sesi konsultasi, dan dapatkan ringkasan data kesehatan mental Anda secara otomatis untuk dibagikan kepada profesional pilihan Anda.",
+  "cta_title": "Siap Memulai Perjalanan Anda?",
+  "cta_description": "Ambil langkah pertama menuju pemahaman diri yang lebih baik. Skrining awal hanya membutuhkan 5-10 menit.",
+  "start_screening_now": "Mulai Skrining Sekarang",
+  "emergency_help": "Bantuan Darurat",
+  "emergency_title": "Bantuan Segera Tersedia",
+  "emergency_description": "Jika Anda atau seseorang yang Anda kenal sedang mengalami krisis mental atau memiliki pikiran untuk menyakiti diri sendiri, jangan ragu untuk mencari bantuan segera.",
+  "emergency_situation": "Situasi Darurat?",
+  "emergency_situation_description": "Jika Anda berada dalam bahaya langsung atau memiliki pikiran untuk menyakiti diri sendiri, segera hubungi nomor darurat atau pergi ke unit gawat darurat terdekat.",
+  "call_national_emergency": "Hubungi 112 (Darurat Nasional)",
+  "hotline_kemenkes": "Hotline Kesehatan Jiwa Kemenkes",
+  "hotline_kemenkes_description": "Layanan konsultasi kesehatan mental 24/7",
+  "sejiwa_service": "Layanan SEJIWA",
+  "sejiwa_service_description": "Dukungan untuk pencegahan bunuh diri",
+  "24_hours": "24 Jam",
+  "call": "Hubungi",
+  "send_message": "Kirim Pesan",
+  "need_further_support": "Butuh Dukungan Lebih Lanjut?",
+  "further_support_description": "Tim dukungan Mynd juga siap membantu Anda menemukan profesional kesehatan mental yang tepat dan memberikan panduan langkah selanjutnya.",
+  "psychologist": "Psikolog",
+  "psychiatrist": "Psikiater",
+  "mh_check_title": "Pemeriksaan Kondisi Mental Awal",
+  "mh_check_intro": "Jawab beberapa pertanyaan berikut untuk mendapatkan gambaran awal mengenai kondisi kesehatan mental Anda. Proses ini bersifat anonim dan hasilnya bukan merupakan diagnosis medis.",
+  "mh_check_question_progress": "Pertanyaan {{current}} dari {{total}}",
+  "mh_check_results_summary": "Berikut adalah ringkasan hasil pemeriksaan Anda:",
+  "mh_check_why_important": "Mengapa Pemeriksaan Ini Penting?",
+  "mh_check_why_1": "Membantu Anda lebih sadar akan kondisi emosional saat ini.",
+  "mh_check_why_2": "Memberikan langkah awal untuk mencari dukungan jika diperlukan.",
+  "mh_check_why_3": "Mendorong refleksi diri yang positif.",
+  "mh_check_confidentiality": "Semua informasi yang Anda berikan akan dijaga kerahasiaannya. Hasil ini bukan diagnosis medis.",
+  "start_examination": "Mulai Pemeriksaan",
+  "next": "Selanjutnya",
+  "view_results": "Lihat Hasil",
+  "back_to_home": "Kembali ke Beranda",
+  "retake_examination": "Ulangi Pemeriksaan",
+  "get_personal_action_plan": "Dapatkan Rencana Aksi Personal",
+  "please_select_answer": "Mohon pilih salah satu jawaban untuk melanjutkan.",
+  "toast_great_job": "Kerja bagus! Terus lanjutkan.",
+  "toast_answered_questions": "Anda sudah menjawab {{count}} pertanyaan.",
+  "toast_finishing_up": "Hampir selesai...",
+  "toast_preparing_results": "Menyiapkan hasil pemeriksaan Anda.",
+  "your_examination_results": "Hasil Pemeriksaan Anda",
+  "score": "Skor",
+  "of": "dari",
+  "category": "Kategori",
+  "category_low": "Rendah",
+  "category_medium": "Sedang",
+  "category_high": "Tinggi",
+  "category_very_high": "Sangat Tinggi",
+  "additional_notes": "Catatan Tambahan Untuk Anda:",
+  "ai_analysis_prompt": "Ingin mendapatkan pandangan lebih mendalam dari asisten AI kami mengenai hasil Anda?",
+  "get_ai_analysis": "Dapatkan Analisis AI Lebih Lanjut",
+  "processing_ai_analysis": "Memproses Analisis AI...",
+  "loading_ai_analysis": "Memuat analisis dari AI, mohon tunggu...",
+  "ai_analysis_failed": "Gagal Memuat Analisis AI",
+  "try_again": "Coba lagi",
+  "ai_additional_analysis": "Analisis Tambahan dari Asisten AI:",
+  "ai_disclaimer": "Harap diingat: Analisis ini dihasilkan oleh AI dan bertujuan untuk memberikan wawasan tambahan, bukan sebagai pengganti nasihat profesional.",
+  "loading": "Memuat...",
+  "domain_mood": "Suasana Hati & Minat",
+  "domain_anxiety": "Kecemasan",
+  "domain_sleep": "Pola Tidur",
+  "domain_energy": "Energi & Kelelahan",
+  "domain_appetite": "Nafsu Makan",
+  "domain_concentration": "Konsentrasi",
+  "domain_self_esteem": "Perasaan Terhadap Diri Sendiri",
+  "domain_disturbing_thoughts": "Pikiran yang Mengganggu",
+  "domain_social_functioning": "Fungsi Sosial & Pekerjaan",
+  "q1_text": "Dalam 2 minggu terakhir, seberapa sering Anda merasa sedih, murung, atau putus asa?",
+  "q_option_never": "Tidak pernah sama sekali",
+  "q_option_several_days": "Beberapa hari",
+  "q_option_more_than_half": "Lebih dari separuh hari",
+  "q_option_nearly_every_day": "Hampir setiap hari",
+  "q2_text": "Dalam 2 minggu terakhir, seberapa sering Anda kehilangan minat atau kesenangan dalam melakukan hal-hal yang biasanya Anda nikmati?",
+  "q3_text": "Dalam 2 minggu terakhir, seberapa sering Anda merasa gugup, cemas, atau sangat tegang?",
+  "q4_text": "Dalam 2 minggu terakhir, seberapa sering Anda tidak mampu menghentikan atau mengendalikan rasa khawatir?",
+  "q5_text": "Dalam 2 minggu terakhir, seberapa sering Anda mengalami kesulitan untuk tidur (sulit terlelap, sering terbangun, atau tidur terlalu dini)?",
+  "q6_text": "Dalam 2 minggu terakhir, seberapa sering Anda merasa lelah atau kekurangan energi?",
+  "q7_text": "Dalam 2 minggu terakhir, seberapa sering Anda mengalami perubahan nafsu makan (berkurang atau berlebih)?",
+  "q8_text": "Dalam 2 minggu terakhir, seberapa sering Anda kesulitan berkonsentrasi pada sesuatu, seperti membaca koran atau menonton televisi?",
+  "q9_text": "Dalam 2 minggu terakhir, seberapa sering Anda merasa buruk tentang diri sendiri — atau bahwa Anda adalah seorang yang gagal atau telah mengecewakan diri sendiri atau keluarga Anda?",
+  "q10_text": "Dalam 2 minggu terakhir, seberapa sering Anda terganggu oleh pikiran bahwa Anda lebih baik mati atau ingin melukai diri sendiri dengan cara apapun?",
+  "q11_text": "Dalam 2 minggu terakhir, sejauh mana masalah-masalah ini (jika ada) menyulitkan Anda dalam melakukan pekerjaan, mengurus rumah tangga, atau bergaul dengan orang lain?",
+  "q11_option_not_difficult": "Tidak sulit sama sekali",
+  "q11_option_somewhat_difficult": "Agak sulit",
+  "q11_option_quite_difficult": "Cukup sulit",
+  "q11_option_very_difficult": "Sangat sulit",
+  "interp_low": "Skor Anda untuk {{domain}} menunjukkan tingkat yang rendah. Ini adalah hal yang positif dan menunjukkan bahwa aspek ini dalam kondisi baik saat ini. Pertahankan kebiasaan sehat yang mendukung kondisi ini.",
+  "interp_medium": "Anda melaporkan beberapa gejala terkait {{domain}} yang berada pada tingkat sedang. Ini adalah area yang mungkin memerlukan perhatian lebih. Cobalah untuk mengidentifikasi pemicu atau situasi yang mungkin berkontribusi dan pertimbangkan strategi koping sederhana. Jika berlanjut, memantau perkembangan bisa bermanfaat.",
+  "interp_high": "Hasil Anda menunjukkan tingkat {{domain}} yang cukup signifikan. Penting untuk tidak mengabaikan ini. Mempertimbangkan untuk berbicara dengan teman tepercaya, anggota keluarga, atau mencari informasi lebih lanjut dari sumber yang kredibel bisa menjadi langkah awal yang baik. Jika gejala ini mengganggu aktivitas sehari-hari, berkonsultasi dengan profesional sangat dianjurkan.",
+  "interp_very_high_general": "Skor Anda untuk {{domain}} berada pada tingkat yang sangat tinggi. Ini menandakan adanya tekanan yang signifikan pada aspek ini. Sangat penting untuk mencari dukungan. Jika Anda merasa sangat tertekan, kewalahan, atau membutuhkan bantuan segera, jangan ragu untuk menghubungi profesional kesehatan mental atau layanan dukungan darurat yang tersedia. Anda tidak harus melalui ini sendirian.",
+  "interp_very_high_disturbing": "Skor Anda untuk Pikiran yang Mengganggu berada pada tingkat yang sangat tinggi. Pikiran untuk melukai diri sendiri atau merasa lebih baik mati adalah hal yang sangat serius dan membutuhkan perhatian segera. Mohon jangan abaikan ini. Segera hubungi layanan darurat (misalnya, 119 di Indonesia) atau hotline kesehatan mental tepercaya. Bantuan profesional sangat penting dan tersedia untuk Anda. Anda tidak sendirian.",
+  "rule_anxiety_sleep": "Kami melihat tingkat kecemasan Anda tinggi dan pola tidur Anda juga menunjukkan adanya masalah. Kedua hal ini seringkali saling terkait. Mengelola stres dan kecemasan di siang hari, serta menciptakan rutinitas tidur yang menenangkan, mungkin dapat membantu memperbaiki kualitas tidur Anda.",
+  "rule_mood_energy": "Tampaknya suasana hati Anda sedang kurang baik dan ini mungkin juga memengaruhi tingkat energi Anda. Perasaan sedih atau kurang minat yang berkepanjangan dapat menguras energi. Aktivitas fisik ringan atau melakukan hobi yang Anda sukai, meskipun terasa sulit, terkadang bisa membantu meningkatkan suasana hati dan energi secara bertahap.",
+  "rule_social_thoughts": "Kesulitan dalam fungsi sosial dan pekerjaan yang Anda alami bersamaan dengan pikiran yang mengganggu pada tingkat sangat tinggi memerlukan perhatian serius. Kombinasi ini bisa sangat memberatkan. Sangat penting untuk segera mencari bantuan profesional untuk mendapatkan dukungan dan strategi penanganan yang tepat.",
+  "actionPlan": {
+    "title": "Rencana Aksi Personal Anda",
+    "description": "Deskripsikan situasi, perasaan, atau tantangan yang sedang Anda hadapi. AI akan membantu membuatkan rencana aksi yang dipersonalisasi untuk Anda.",
+    "assessmentSummaryTitle": "Ringkasan Hasil Pemeriksaan Anda Sebelumnya",
+    "addDetailsLabel": "Tambahkan detail atau fokus spesifik Anda di sini:",
+    "describeSituationLabel": "Deskripsikan situasi, perasaan, atau tantangan Anda:",
+    "placeholder": "Contoh: Saya ingin fokus mengatasi kesulitan tidur dan rasa cemas berlebih saat presentasi di kantor...",
+    "generateButton": "Buat Rencana Aksi",
+    "generatingButton": "Membuat Rencana...",
+    "cancelButton": "Batal",
+    "yourPlanTitle": "Rencana Aksi Anda:",
+    "relatedResourcesTitle": "Sumber Daya Terkait yang Mungkin Membantu:",
+    "errorInputRequired": "Mohon masukkan deskripsi situasi atau perasaan Anda, atau pastikan ada hasil asesmen sebelumnya.",
+    "errorProcessCancelled": "Proses dibatalkan.",
+    "errorGeneric": "Terjadi kesalahan saat membuat rencana aksi.",
+    "errorPlanCancelled": "Pembuatan rencana dibatalkan.",
+    "assessmentSummaryLabel": "Ringkasan Hasil Asesmen Sebelumnya",
+    "userInputLabel": "Input Tambahan Pengguna",
+    "resources": {
+      "mindfulnessBreathing": "Latihan Pernapasan Mindfulness",
+      "progressiveMuscleRelaxation": "Latihan Relaksasi Otot Progresif",
+      "managingAnxietyArticle": "Artikel Mengelola Kecemasan",
+      "cbtIntroductionArticle": "Panduan Pengantar CBT"
+    }
+  },
+  "mindfulness": {
+    "title": "Latihan Pernapasan Mindfulness",
+    "subtitle": "Temukan ketenangan dan fokus melalui latihan pernapasan sederhana yang bisa Anda lakukan di mana saja dan kapan saja.",
+    "whatIs": {
+      "title": "Apa itu Pernapasan Mindfulness?",
+      "p1": "Pernapasan mindfulness adalah praktik memusatkan perhatian secara penuh pada sensasi napas Anda saat ini, tanpa menghakimi. Ini bukan tentang mengubah cara Anda bernapas, melainkan mengamati proses alami pernapasan Anda.",
+      "p2": "Dengan melatih kesadaran pada napas, Anda melatih pikiran untuk lebih tenang, fokus, dan hadir sepenuhnya pada momen saat ini."
+    },
+    "benefits": {
+      "title": "Manfaat Latihan Ini",
+      "b1": "Mengurangi stres dan kecemasan.",
+      "b2": "Meningkatkan fokus dan konsentrasi.",
+      "b3": "Membantu menenangkan sistem saraf.",
+      "b4": "Meningkatkan kesadaran diri (self-awareness).",
+      "b5": "Dapat membantu meningkatkan kualitas tidur."
+    },
+    "steps": {
+      "title": "Langkah-langkah Latihan",
+      "subtitle": "Ikuti langkah-langkah sederhana ini untuk memulai.",
+      "stepLabel": "Langkah {{step}}",
+      "1": {
+        "title": "Temukan Posisi Nyaman",
+        "description": "Duduklah dengan nyaman di kursi dengan punggung tegak namun bahu rileks. Anda juga bisa berbaring jika itu lebih nyaman. Pastikan Anda tidak akan terganggu selama beberapa menit."
+      },
+      "2": {
+        "title": "Pejamkan Mata (Opsional)",
+        "description": "Pejamkan mata Anda dengan lembut. Jika Anda tidak nyaman memejamkan mata, cukup arahkan pandangan Anda ke bawah dengan lembut, sekitar satu meter di depan Anda, tanpa fokus pada apapun."
+      },
+      "3": {
+        "title": "Amati Napas Anda",
+        "description": "Alihkan perhatian Anda ke napas. Rasakan sensasi udara yang masuk dan keluar dari tubuh Anda. Perhatikan di mana Anda paling merasakan napas: mungkin di lubang hidung, tenggorokan, dada, atau perut."
+      },
+      "4": {
+        "title": "Jangan Mengubah, Hanya Amati",
+        "description": "Tidak perlu mengubah cara Anda bernapas. Biarkan napas mengalir secara alami. Tugas Anda hanyalah mengamati, menjadi saksi dari setiap tarikan dan hembusan napas."
+      },
+      "5": {
+        "title": "Kembali Saat Pikiran Berkelana",
+        "description": "Pikiran Anda pasti akan berkelana – ini sangat normal. Saat Anda menyadari pikiran Anda tidak lagi pada napas, akui ke mana pikiran itu pergi, lalu dengan lembut kembalikan perhatian Anda ke sensasi napas."
+      },
+      "6": {
+        "title": "Lakukan Selama Beberapa Menit",
+        "description": "Mulailah dengan 3-5 menit. Anda bisa menggunakan timer jika mau. Seiring waktu, Anda bisa menambah durasinya jika merasa nyaman."
+      },
+      "7": {
+        "title": "Akhiri dengan Lembut",
+        "description": "Setelah selesai, luangkan waktu sejenak untuk memperhatikan bagaimana perasaan tubuh dan pikiran Anda. Buka mata Anda perlahan (jika terpejam) dan bawa kesadaran ini ke aktivitas Anda selanjutnya."
+      }
+    },
+    "tips": {
+      "title": "Tips Tambahan",
+      "t1": "**Konsistensi adalah kunci.** Lebih baik berlatih beberapa menit setiap hari daripada lama tapi jarang.",
+      "t2": "**Bersikaplah lembut pada diri sendiri.** Tidak ada 'cara yang salah' dalam bermindfulness. Proses belajar adalah bagiannya.",
+      "t3": "Anda bisa melakukan latihan ini **kapan saja** Anda merasa butuh jeda atau merasa stres."
+    }
+  },
+  "pmr": {
+    "title": "Latihan Relaksasi Otot Progresif (PMR)",
+    "subtitle": "Lepaskan ketegangan fisik dan mental dengan teknik relaksasi otot progresif yang terstruktur.",
+    "whatIs": {
+      "title": "Apa itu Relaksasi Otot Progresif?",
+      "p1": "Relaksasi Otot Progresif (PMR) adalah teknik relaksasi mendalam yang dikembangkan oleh Dr. Edmund Jacobson pada awal abad ke-20. Teknik ini melibatkan proses sistematis menegangkan kelompok otot tertentu di tubuh Anda, menahannya sejenak, lalu melepaskan ketegangan tersebut.",
+      "p2": "Dengan fokus pada perbedaan sensasi antara ketegangan dan relaksasi, Anda belajar untuk lebih menyadari dan melepaskan ketegangan fisik yang seringkali tidak disadari, yang pada gilirannya dapat membantu menenangkan pikiran."
+    },
+    "benefits": {
+      "title": "Manfaat Latihan PMR",
+      "b1": "Mengurangi ketegangan otot kronis.",
+      "b2": "Membantu mengatasi insomnia dan meningkatkan kualitas tidur.",
+      "b3": "Menurunkan gejala kecemasan dan stres.",
+      "b4": "Dapat membantu mengurangi nyeri tertentu (misalnya, sakit kepala tegang).",
+      "b5": "Meningkatkan kesadaran tubuh."
+    },
+    "guide": {
+      "title": "Panduan Latihan Relaksasi Otot Progresif",
+      "subtitle": "Ikuti urutan ini, fokus pada setiap kelompok otot."
+    },
+    "preparation": {
+      "title": "Persiapan Sebelum Memulai",
+      "p1": "Cari tempat yang tenang dan nyaman di mana Anda tidak akan terganggu selama 15-20 menit.",
+      "p2": "Kenakan pakaian yang longgar dan nyaman.",
+      "p3": "Anda bisa duduk di kursi yang mendukung punggung Anda atau berbaring.",
+      "p4": "Lepaskan kacamata atau lensa kontak jika Anda menggunakannya.",
+      "p5": "Ambil beberapa napas dalam dan perlahan untuk memulai."
+    },
+    "groups": {
+      "label": "Kelompok Otot {{index}}",
+      "focus": "Fokus pada perbedaan sensasi antara tegang dan rileks.",
+      "hands": {
+        "name": "Tangan dan Lengan Bawah",
+        "instruction": "Kepalkan tangan Anda sekuat mungkin selama 5-7 detik, rasakan ketegangannya. Lalu, lepaskan perlahan selama 10-15 detik, rasakan relaksasinya."
+      },
+      "upperArms": {
+        "name": "Lengan Atas (Bisep)",
+        "instruction": "Tekuk lengan Anda dan tegangkan otot bisep (seperti mengangkat beban) selama 5-7 detik. Lepaskan perlahan."
+      },
+      "forehead": {
+        "name": "Dahi",
+        "instruction": "Angkat alis Anda setinggi mungkin, tahan selama 5-7 detik. Lepaskan perlahan."
+      },
+      "eyes": {
+        "name": "Mata dan Pipi",
+        "instruction": "Pejamkan mata Anda sekuat mungkin dan kerutkan pipi Anda selama 5-7 detik. Lepaskan perlahan."
+      },
+      "mouth": {
+        "name": "Mulut dan Rahang",
+        "instruction": "Buka mulut Anda selebar mungkin, atau katupkan rahang Anda dengan kuat (pilih salah satu) selama 5-7 detik. Lepaskan perlahan."
+      },
+      "neck": {
+        "name": "Leher dan Bahu",
+        "instruction": "Angkat bahu Anda ke arah telinga setinggi mungkin, tahan selama 5-7 detik. Lepaskan perlahan. Atau, tarik dagu ke dada, rasakan peregangan di leher belakang."
+      },
+      "chest": {
+        "name": "Dada",
+        "instruction": "Tarik napas dalam-dalam dan tahan, rasakan ketegangan di dada Anda selama 5-7 detik. Hembuskan napas perlahan dan lepaskan ketegangan."
+      },
+      "stomach": {
+        "name": "Perut",
+        "instruction": "Tarik perut Anda ke dalam sekuat mungkin, tahan selama 5-7 detik. Lepaskan perlahan."
+      },
+      "back": {
+        "name": "Punggung",
+        "instruction": "Lengkungkan punggung Anda sedikit (jika nyaman), tahan selama 5-7 detik. Lepaskan perlahan."
+      },
+      "thighs": {
+        "name": "Paha",
+        "instruction": "Kencangkan otot paha Anda sekuat mungkin selama 5-7 detik. Lepaskan perlahan."
+      },
+      "calves": {
+        "name": "Betis",
+        "instruction": "Arahkan jari-jari kaki Anda ke atas (ke arah lutut) untuk menegangkan otot betis, tahan selama 5-7 detik. Lepaskan perlahan."
+      },
+      "feet": {
+        "name": "Kaki dan Jari Kaki",
+        "instruction": "Lengkungkan jari-jari kaki Anda ke bawah sekuat mungkin, tahan selama 5-7 detik. Lepaskan perlahan."
+      }
+    },
+    "after": {
+      "title": "Setelah Selesai",
+      "description": "Setelah menyelesaikan semua kelompok otot, nikmati perasaan relaksasi total selama beberapa menit. Perhatikan bagaimana tubuh Anda terasa lebih ringan dan pikiran lebih tenang. Buka mata perlahan dan kembali ke aktivitas Anda dengan perasaan segar."
+    },
+    "tips": {
+      "title": "Tips Penting",
+      "t1": "Jangan menahan napas saat menegangkan otot, tetaplah bernapas secara normal.",
+      "t2": "Tegangkan otot secukupnya, jangan sampai terasa sakit.",
+      "t3": "Jika Anda memiliki kondisi medis tertentu atau cedera, konsultasikan dengan dokter sebelum mencoba latihan ini.",
+      "t4": "Lakukan secara rutin untuk mendapatkan manfaat maksimal."
+    },
+    "warning": {
+      "title": "Perhatian",
+      "description": "Latihan ini bertujuan untuk relaksasi umum. Jika Anda mengalami nyeri kronis, ketegangan parah, atau kondisi medis lain, selalu konsultasikan dengan profesional kesehatan sebelum memulai program latihan baru."
+    }
+  },
+  "anxietyArticle": {
+    "title": "Mengelola Kecemasan: Panduan untuk Ketenangan Pikiran",
+    "subtitle": "Pahami apa itu kecemasan, kenali gejalanya, dan pelajari strategi efektif untuk mengelolanya dalam kehidupan sehari-hari.",
+    "understanding": {
+      "title": "Memahami Kecemasan",
+      "p1": "Kecemasan adalah respons alami tubuh terhadap stres atau potensi bahaya. Ini adalah emosi yang ditandai dengan perasaan tegang, pikiran khawatir, dan perubahan fisik seperti peningkatan detak jantung atau keringat. Dalam kadar tertentu, kecemasan bisa bermanfaat, misalnya memotivasi kita untuk bersiap menghadapi ujian atau presentasi penting.",
+      "p2": "Namun, ketika perasaan cemas menjadi berlebihan, terjadi terlalu sering, atau tidak sebanding dengan situasi yang dihadapi, hal itu dapat mengganggu kualitas hidup dan dikategorikan sebagai gangguan kecemasan. Penting untuk mengenali perbedaannya."
+    },
+    "symptoms": {
+      "title": "Mengenali Gejala Kecemasan",
+      "description": "Gejala kecemasan bisa bervariasi pada setiap orang, namun umumnya meliputi aspek fisik, pikiran, dan perilaku.",
+      "physical": {
+        "title": "Gejala Fisik:",
+        "s1": "Detak jantung cepat atau berdebar-debar",
+        "s2": "Napas pendek atau terengah-engah",
+        "s3": "Pusing atau sensasi melayang",
+        "s4": "Mulut kering, mual, atau gangguan pencernaan",
+        "s5": "Gemetar atau berkeringat",
+        "s6": "Ketegangan otot atau sakit kepala",
+        "s7": "Kelelahan"
+      },
+      "cognitive": {
+        "title": "Gejala Pikiran (Kognitif):",
+        "s1": "Khawatir berlebihan tentang masa lalu, sekarang, atau masa depan",
+        "s2": "Pikiran negatif atau pesimis yang sulit dikendalikan",
+        "s3": "Kesulitan berkonsentrasi atau pikiran kosong",
+        "s4": "Merasa seperti akan kehilangan kendali atau menjadi gila",
+        "s5": "Ketakutan akan penilaian orang lain"
+      },
+      "behavioral": {
+        "title": "Gejala Perilaku:",
+        "s1": "Menghindari situasi yang memicu cemas",
+        "s2": "Perilaku gelisah (misalnya, mondar-mandir, menggigit kuku)",
+        "s3": "Mudah marah atau tersinggung",
+        "s4": "Kesulitan tidur",
+        "s5": "Mencari kepastian berulang kali"
+      }
+    },
+    "strategies": {
+      "title": "Strategi Mengelola Kecemasan",
+      "relaxation": {
+        "title": "Teknik Relaksasi",
+        "p1": "Latihan seperti ",
+        "link1": "pernapasan mindfulness",
+        "p2": " atau ",
+        "link2": "relaksasi otot progresif",
+        "p3": " dapat membantu menenangkan respons fisik terhadap kecemasan."
+      },
+      "mindset": {
+        "title": "Pola Pikir Sehat (Dasar CBT)",
+        "p1": "Identifikasi dan tantang pikiran negatif atau tidak realistis yang memicu kecemasan. Ganti dengan pikiran yang lebih seimbang dan positif. Pelajari lebih lanjut tentang ",
+        "link1": "dasar-dasar CBT"
+      },
+      "lifestyle": {
+        "title": "Gaya Hidup Sehat",
+        "l1": "Olahraga teratur dapat melepaskan endorfin dan mengurangi ketegangan.",
+        "l2": "Tidur yang cukup dan berkualitas sangat penting untuk kesehatan mental.",
+        "l3": "Konsumsi makanan bergizi seimbang dan batasi kafein serta alkohol."
+      },
+      "social": {
+        "title": "Cari Dukungan Sosial",
+        "p1": "Berbicara dengan teman, keluarga, atau bergabung dengan kelompok dukungan dapat membantu Anda merasa tidak sendirian dan mendapatkan perspektif baru."
+      }
+    },
+    "professionalHelp": {
+      "title": "Kapan Harus Mencari Bantuan Profesional?",
+      "description": "Jika kecemasan Anda parah, berlangsung lama, sangat mengganggu aktivitas sehari-hari, atau jika Anda mulai memiliki pikiran untuk menyakiti diri sendiri, sangat penting untuk segera mencari bantuan dari profesional kesehatan mental seperti psikolog atau psikiater. Mereka dapat memberikan diagnosis yang tepat dan rencana perawatan yang sesuai."
+    }
+  },
+  "cbtArticle": {
+    "title": "Pengantar Terapi Perilaku Kognitif (CBT)",
+    "subtitle": "Pahami dasar-dasar CBT, bagaimana cara kerjanya, dan bagaimana terapi ini dapat membantu Anda mengubah pola pikir dan perilaku.",
+    "whatIs": {
+      "title": "Apa itu Terapi Perilaku Kognitif (CBT)?",
+      "p1": "Terapi Perilaku Kognitif (Cognitive Behavioral Therapy - CBT) adalah jenis terapi psikologis (psikoterapi) yang telah terbukti efektif untuk berbagai masalah kesehatan mental, termasuk depresi, gangguan kecemasan, masalah penggunaan zat, gangguan makan, dan masalah hubungan.",
+      "p2": "CBT didasarkan pada gagasan bahwa pikiran, perasaan, sensasi fisik, dan tindakan kita saling berhubungan. Pikiran negatif dan perasaan dapat menjebak kita dalam lingkaran setan. CBT bertujuan untuk membantu Anda memutus lingkaran ini dengan mengidentifikasi dan mengubah pola pikir (kognisi) dan perilaku negatif atau tidak membantu."
+    },
+    "principles": {
+      "title": "Prinsip Dasar CBT",
+      "p1": "**Fokus pada Saat Ini:** CBT lebih berfokus pada masalah dan solusi di masa kini daripada menggali masa lalu secara ekstensif.",
+      "p2": "**Terstruktur dan Berorientasi Tujuan:** Sesi CBT biasanya terstruktur, dengan agenda dan tujuan yang jelas yang disepakati bersama antara terapis dan klien.",
+      "p3": "**Kolaboratif:** Terapis dan klien bekerja sama sebagai tim untuk memahami masalah dan mengembangkan strategi.",
+      "p4": "**Mengajarkan Keterampilan:** CBT bertujuan untuk membekali Anda dengan keterampilan praktis yang dapat Anda gunakan dalam kehidupan sehari-hari untuk mengatasi tantangan.",
+      "p5": "**Berbasis Bukti:** Efektivitas CBT didukung oleh banyak penelitian ilmiah."
+    },
+    "howItWorks": {
+      "title": "Bagaimana CBT Bekerja? Model Kognitif",
+      "p1": "CBT bekerja berdasarkan model kognitif, yang menyatakan bahwa bukan situasi itu sendiri yang menentukan bagaimana perasaan kita, melainkan bagaimana kita menginterpretasikan atau memikirkan situasi tersebut.",
+      "model": "Situasi → Pikiran Otomatis → Reaksi (Emosi, Perilaku, Sensasi Fisik)",
+      "example": "Sebagai contoh: Bayangkan Anda tidak diundang ke sebuah acara oleh teman.",
+      "thoughtLabel": "Pikiran Otomatis Negatif",
+      "thought": "\"Mereka tidak menyukaiku,\" \"Aku pasti membosankan.\"",
+      "emotionLabel": "Emosi yang Timbul",
+      "emotion": "Sedih, cemas, marah.",
+      "behaviorLabel": "Perilaku",
+      "behavior": "Menarik diri, tidak menghubungi teman tersebut.",
+      "sensationLabel": "Sensasi Fisik",
+      "sensation": "Perut tidak nyaman, dada sesak.",
+      "p2": "CBT membantu Anda mengidentifikasi pikiran otomatis negatif ini, mengevaluasi keakuratannya, dan menggantinya dengan pikiran yang lebih realistis dan membantu.",
+      "altThoughtLabel": "Contoh Pikiran Alternatif:",
+      "altThought": "\"Mungkin mereka lupa, atau acaranya memang untuk kelompok kecil. Saya bisa bertanya baik-baik atau merencanakan hal lain dengan mereka lain waktu.\""
+    },
+    "issues": {
+      "title": "Masalah yang Dapat Dibantu CBT",
+      "p1": "CBT efektif untuk berbagai kondisi, termasuk:",
+      "i1": "Depresi",
+      "i2": "Gangguan Kecemasan Umum (GAD)",
+      "i3": "Gangguan Panik",
+      "i4": "Fobia (misalnya, fobia sosial, agorafobia)",
+      "i5": "Gangguan Stres Pasca-Trauma (PTSD)",
+      "i6": "Gangguan Obsesif-Kompulsif (OCD)",
+      "i7": "Gangguan Makan",
+      "i8": "Masalah Tidur (Insomnia)",
+      "i9": "Manajemen Stres",
+      "i10": "Masalah Hubungan",
+      "i11": "Manajemen Kemarahan",
+      "i12": "Nyeri Kronis"
+    },
+    "techniques": {
+      "title": "Contoh Teknik CBT Sederhana",
+      "p1": "Berikut beberapa teknik dasar yang sering digunakan dalam CBT:",
+      "t1": {
+        "title": "1. Jurnal Pikiran (Thought Record)",
+        "description": "Mencatat situasi, pikiran otomatis yang muncul, emosi yang dirasakan, dan kemudian mencoba merumuskan respons alternatif yang lebih seimbang."
+      },
+      "t2": {
+        "title": "2. Restrukturisasi Kognitif",
+        "description": "Mengidentifikasi distorsi kognitif (pola pikir negatif yang tidak akurat, seperti overgeneralisasi atau catastrophizing) dan belajar untuk menantang serta mengubahnya."
+      },
+      "t3": {
+        "title": "3. Aktivasi Perilaku (Behavioral Activation)",
+        "description": "Mendorong partisipasi dalam aktivitas yang menyenangkan atau memberikan rasa pencapaian, terutama untuk mengatasi depresi dan penarikan diri."
+      },
+      "t4": {
+        "title": "4. Paparan Bertahap (Graded Exposure)",
+        "description": "Secara bertahap dan sistematis menghadapi situasi atau objek yang ditakuti untuk mengurangi kecemasan dan fobia."
+      }
+    },
+    "journey": {
+      "title": "CBT adalah Perjalanan Kolaboratif",
+      "description": "Meskipun artikel ini memberikan pengantar, CBT paling efektif bila dilakukan dengan bimbingan terapis terlatih. Terapis dapat membantu Anda menerapkan teknik-teknik ini secara personal dan mendalam. Jika Anda merasa membutuhkan dukungan, jangan ragu untuk mencari profesional."
+    }
+  },
+  "chatbot": {
+    "title": "Chatbot Mynd",
+    "greeting": "Halo! Ada yang bisa saya bantu hari ini?",
+    "placeholder": "Tulis pesan Anda di sini...",
+    "typing": "Mengetik...",
+    "errorMessage": "Maaf, terjadi kesalahan. Coba lagi nanti.",
+    "errorResponse": "Maaf, saya tidak bisa merespon saat ini."
+  },
+  "edukasi": {
+    "title": "Video Edukasi Kesehatan Mental",
+    "description": "Selamat datang di halaman edukasi kami. Di sini Anda akan menemukan kumpulan video yang informatif dan mendukung, dirancang untuk membantu Anda memahami lebih dalam tentang kesehatan mental, strategi pengelolaan stres, dan berbagai teknik untuk meningkatkan kesejahteraan emosional Anda. Kami percaya bahwa pengetahuan adalah langkah pertama menuju perubahan positif. Saksikan video-video pilihan kami untuk memulai perjalanan Anda menuju pikiran yang lebih sehat.",
+    "video1": { "title": "Video Edukasi 1" },
+    "video2": { "title": "Video Edukasi 2" },
+    "video3": { "title": "Video Edukasi 3" },
+    "video4": { "title": "Video Edukasi 4" },
+    "video5": { "title": "Video Edukasi 5" },
+    "video6": { "title": "Video Edukasi 6" }
+  }
+}

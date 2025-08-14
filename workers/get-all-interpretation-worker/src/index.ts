@@ -2,20 +2,22 @@ import { GoogleGenAI } from "@google/genai";
 
 export interface Env {
   GEMINI_API_KEY: string;
-  // Add other environment variables or bindings here if needed
-  // Example: MY_KV_NAMESPACE: KVNamespace;
 }
 
 interface InterpretationResult {
   domainName: string;
   score: number;
   maxScore: number;
-  category: 'Rendah' | 'Sedang' | 'Tinggi' | 'Sangat Tinggi';
-  message: string; // Pesan statis yang sudah ada
+  category: 'Low' | 'Medium' | 'High' | 'Very High';
+  message: string;
 }
 
-// Model and generation configuration (same as Netlify function)
-const modelName = "gemini-2.5-flash-preview-05-20";
+interface RequestBody {
+  results: InterpretationResult[];
+  language: 'en' | 'id';
+}
+
+const modelName = "gemini-2.0-flash";
 const generationConfig = {
   temperature: 0.7,
   topK: 1,
@@ -26,7 +28,6 @@ const generationConfig = {
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-    // Handle CORS preflight requests
     if (request.method === 'OPTIONS') {
       return handleOptions(request);
     }
@@ -40,7 +41,7 @@ export default {
 
     if (!env.GEMINI_API_KEY) {
       console.error('Gemini API key is not set in worker environment.');
-      return new Response(JSON.stringify({ error: 'Konfigurasi server error: Gemini API key tidak ditemukan.' }), {
+      return new Response(JSON.stringify({ error: 'Server configuration error: Gemini API key not found.' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json', ...corsHeaders(request) },
       });
@@ -48,43 +49,49 @@ export default {
 
     const genAI = new GoogleGenAI({ apiKey: env.GEMINI_API_KEY });
 
-    let interpretationResults: InterpretationResult[];
+    let requestBody: RequestBody;
     try {
-      interpretationResults = await request.json();
+      requestBody = await request.json();
     } catch (error) {
       console.error('Error parsing request body:', error);
-      return new Response(JSON.stringify({ error: 'Format permintaan tidak valid.' }), {
+      return new Response(JSON.stringify({ error: 'Invalid request format.' }), {
         status: 400,
         headers: { 'Content-Type': 'application/json', ...corsHeaders(request) },
       });
     }
 
+    const { results: interpretationResults, language = 'id' } = requestBody;
+
     if (!interpretationResults || !Array.isArray(interpretationResults) || interpretationResults.length === 0) {
-      return new Response(JSON.stringify({ error: 'Data interpretasi tidak boleh kosong dan harus berupa array.' }), {
+      return new Response(JSON.stringify({ error: 'Interpretation data cannot be empty and must be an array.' }), {
         status: 400,
         headers: { 'Content-Type': 'application/json', ...corsHeaders(request) },
       });
     }
 
     const summaryForAI = interpretationResults.map(r =>
-      `${r.domainName}: Skor ${r.score}/${r.maxScore} (Kategori: ${r.category})`
+      `${r.domainName}: Score ${r.score}/${r.maxScore} (Category: ${r.category})`
     ).join('\n');
 
-    const fullPrompt = `Anda adalah seorang asisten kesehatan mental virtual yang empatik dan suportif. Tugas Anda adalah memberikan interpretasi dan saran umum berdasarkan ringkasan hasil pemeriksaan kondisi mental pengguna.
-PENTING:
-1.  JANGAN PERNAH memberikan diagnosis medis. Selalu tekankan bahwa ini adalah pemeriksaan awal dan bukan pengganti konsultasi profesional.
-2.  Gunakan bahasa yang mudah dipahami, hangat, dan memberi semangat.
-3.  Fokus pada memberikan pandangan yang konstruktif dan saran praktis yang aman untuk dilakukan secara mandiri (misalnya, teknik relaksasi, aktivitas fisik ringan, menjaga rutinitas).
-4.  Jika ada skor yang sangat tinggi, terutama pada "Pikiran yang Mengganggu", sarankan dengan sangat kuat untuk mencari bantuan profesional atau layanan darurat, namun tetap dengan nada suportif.
-5.  Hindari membuat janji atau klaim yang berlebihan.
-6.  Jaga agar respons tetap ringkas namun informatif, panjang "maksimal" 4-5 paragraf dengan batas output 1500 token.
-7.  Sertakan disclaimer bahwa ini adalah interpretasi AI dan bukan dari tenaga medis profesional.
-8.  Gunakan bahasa Indonesia.
+    const languageInstruction = language === 'en' 
+      ? "Use English language."
+      : "Gunakan bahasa Indonesia.";
 
-Berikut adalah ringkasan hasil pemeriksaan kondisi mental pengguna:
+    const fullPrompt = `You are an empathetic and supportive virtual mental health assistant. Your task is to provide a general interpretation and advice based on the user's mental health check summary.
+IMPORTANT:
+1.  NEVER provide a medical diagnosis. Always emphasize that this is a preliminary check and not a substitute for professional consultation.
+2.  Use language that is easy to understand, warm, and encouraging.
+3.  Focus on providing constructive insights and practical, safe self-help tips (e.g., relaxation techniques, light physical activity, maintaining routines).
+4.  If there are very high scores, especially on "Disturbing Thoughts", strongly recommend seeking professional help or emergency services, but maintain a supportive tone.
+5.  Avoid making promises or exaggerated claims.
+6.  Keep the response concise yet informative, with a "maximum" length of 4-5 paragraphs and an output limit of 1500 tokens.
+7.  Include a disclaimer that this is an AI interpretation and not from a medical professional.
+8.  ${languageInstruction}
+
+Here is the summary of the user's mental health check results:
 ${summaryForAI}
 
-Tolong berikan interpretasi umum, beberapa saran yang membangun, dan pengingat bahwa ini bukan diagnosis.`;
+Please provide a general interpretation, some constructive advice, and a reminder that this is not a diagnosis.`;
 
     try {
       const contents = [
@@ -114,9 +121,9 @@ Tolong berikan interpretasi umum, beberapa saran yang membangun, dan pengingat b
       const aiMessage = accumulatedText.trim();
 
       if (!aiMessage) {
-        console.warn('Respons AI kosong, mungkin diblokir oleh safety settings atau tidak ada konten yang dihasilkan.');
-        return new Response(JSON.stringify({ interpretation: "Tidak dapat menghasilkan interpretasi saat ini. Coba lagi nanti atau periksa input Anda." }), {
-          status: 200, // Or 500 if this is considered a fatal error
+        console.warn('AI response was empty, possibly blocked by safety settings or no content generated.');
+        return new Response(JSON.stringify({ interpretation: "Could not generate an interpretation at this time. Please try again later or check your input." }), {
+          status: 200,
           headers: { 'Content-Type': 'application/json', ...corsHeaders(request) },
         });
       }
@@ -128,7 +135,7 @@ Tolong berikan interpretasi umum, beberapa saran yang membangun, dan pengingat b
 
     } catch (error: any) {
       console.error('Error calling Gemini API:', error);
-      let errorMessage = 'Terjadi kesalahan saat menghubungi layanan AI Gemini.';
+      let errorMessage = 'An error occurred while contacting the Gemini AI service.';
       if (error.message) {
         errorMessage = error.message;
       }
@@ -143,36 +150,14 @@ Tolong berikan interpretasi umum, beberapa saran yang membangun, dan pengingat b
   },
 };
 
-// Helper function to set CORS headers
-// IMPORTANT: Adjust the origin to your specific frontend domain for production
-// Using '*' is generally not recommended for production environments.
 function corsHeaders(request: Request) {
-  const requestOrigin = request.headers.get('Origin');
-  // In a production environment, you should replace '*' with your actual frontend domain
-  // e.g., 'https://your-frontend-app.com'
-  // For local development, you might allow specific local origins or keep '*'
-  const allowedOrigins = ['http://localhost:8080', 'http://localhost:8888', 'http://localhost:5173', 'https://your-production-domain.com']; // Add your frontend origins
-
-  let origin = '*'; // Default to wildcard, but ideally restrict this
-  if (requestOrigin && allowedOrigins.includes(requestOrigin)) {
-    origin = requestOrigin;
-  } else if (requestOrigin && !allowedOrigins.includes(requestOrigin)) {
-    // If the origin is present but not in the allowed list,
-    // it's better not to send Access-Control-Allow-Origin to avoid issues.
-    // Or, for stricter control, you might deny the request.
-    // For now, we'll fall back to '*' if no specific match, but this should be reviewed.
-    // console.warn(`Origin ${requestOrigin} not in allowed list. Defaulting to '*' for CORS.`);
-  }
-
-
   return {
-    'Access-Control-Allow-Origin': origin,
+    'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization', // Add any other headers your client sends
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
   };
 }
 
-// Handle CORS preflight requests
 function handleOptions(request: Request) {
   const headers = request.headers;
   if (
@@ -180,12 +165,10 @@ function handleOptions(request: Request) {
     headers.get('Access-Control-Request-Method') !== null &&
     headers.get('Access-Control-Request-Headers') !== null
   ) {
-    // Handle CORS preflight requests.
     return new Response(null, {
       headers: corsHeaders(request),
     });
   } else {
-    // Handle standard OPTIONS request.
     return new Response(null, {
       headers: {
         Allow: 'POST, OPTIONS',

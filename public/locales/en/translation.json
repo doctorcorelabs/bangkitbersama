@@ -1,0 +1,470 @@
+{
+  "welcome": "Welcome to Mynd",
+  "find_peace": "Find Peace",
+  "know_yourself": "Know Yourself",
+  "rise_with_us": "Rise With Us",
+  "hero_description": "Mynd is your digital companion to empower you to understand your mental condition, take proactive steps, and feel not alone in your journey to better mental health.",
+  "start_check": "Start Check",
+  "learn_more": "Learn More",
+  "privacy_protected": "Privacy Protected",
+  "partner_integration": "Partner Integration",
+  "ai_supported": "AI Supported",
+  "important_warning": "Important Warning: Mynd is an education and early screening platform. The results shown are not a medical diagnosis. For further diagnosis and treatment, please contact a professional psychologist or psychiatrist.",
+  "home": "Home",
+  "check_condition": "Check Condition",
+  "action_plan": "Action Plan",
+  "education": "Education",
+  "footer_brand": "Mynd",
+  "footer_description": "A digital travel companion for better mental health. Find peace, know yourself, rise with us.",
+  "footer_copyright": "© 2025 Mynd. All rights reserved. (Author Daivan Febri Juan Setiya)",
+  "main_feature": "Main Feature",
+  "feature_title": "Personalized Mental Health Journey",
+  "feature_description": "From initial screening to management, we are here as a digital travel companion that empowers you with intelligent AI support and deep empathy.",
+  "screening_title": "Fast & Adaptive Screening",
+  "screening_description": "Start your mental health journey with a smart and adaptive initial screening. Our system uses artificial intelligence to ask questions relevant to your condition, ensuring a personal and efficient screening process. The results of this screening will be the basis for tailored recommendations and action plans.",
+  "screening_details": "Get an initial understanding of your mental condition through a series of clinically designed questions presented in a comfortable and easy-to-follow conversational format.",
+  "analysis_title": "In-depth Analysis with AI",
+  "analysis_description": "Leverage the power of Natural Language Processing (NLP) analysis to dig deeper into your thought patterns and emotional dynamics. Our interactive journal feature helps you reflect on daily experiences, while AI works in the background to detect sentiment, extract key themes, and identify potential cognitive distortions.",
+  "analysis_details": "Our AI automatically analyzes your journal entries to provide valuable insights into emotional trends, recurring themes in your thoughts, and helps recognize unhelpful thought patterns.",
+  "action_plan_title": "Personal Action Plan",
+  "action_plan_description": "Based on the results of the screening and in-depth analysis, Mynd creates a personalized action plan just for you. This plan includes recommendations for educational content, evidence-based self-help exercises like Cognitive Behavioral Therapy (CBT) and mindfulness, and a mood tracker feature to support a structured and sustainable recovery process.",
+  "action_plan_details": "Access a variety of practical exercises such as CBT techniques to change negative thought patterns, mindfulness exercises to increase self-awareness, and track your mood progress regularly.",
+  "education_title": "Mental Health Education",
+  "education_description": "Increase your understanding of mental health through our rich and easily accessible library of educational content. We provide a variety of informative articles, engaging videos, and infographics designed to explain various mental health topics in a comprehensive yet light and easy-to-digest manner.",
+  "education_details": "Learn more about various mental conditions, stress management strategies, tips for maintaining emotional well-being, and effective ways to combat the negative stigma surrounding mental health.",
+  "professional_title": "Connection with Professionals",
+  "professional_description": "If you need further support, Mynd facilitates you to connect with a network of verified professional psychologists and counselors. We also help prepare a summary of your condition based on the data in the application to facilitate your initial consultation session, so you can get the right help faster.",
+  "professional_details": "Explore our professional directory, take advantage of the consultation session scheduling feature, and get an automatic summary of your mental health data to share with your chosen professional.",
+  "cta_title": "Ready to Start Your Journey?",
+  "cta_description": "Take the first step towards a better understanding of yourself. The initial screening only takes 5-10 minutes.",
+  "start_screening_now": "Start Screening Now",
+  "emergency_help": "Emergency Help",
+  "emergency_title": "Immediate Help Available",
+  "emergency_description": "If you or someone you know is experiencing a mental crisis or has thoughts of self-harm, do not hesitate to seek help immediately.",
+  "emergency_situation": "Emergency Situation?",
+  "emergency_situation_description": "If you are in immediate danger or have thoughts of harming yourself, immediately call the emergency number or go to the nearest emergency unit.",
+  "call_national_emergency": "Call 112 (National Emergency)",
+  "hotline_kemenkes": "Ministry of Health Mental Health Hotline",
+  "hotline_kemenkes_description": "24/7 mental health consultation service",
+  "sejiwa_service": "SEJIWA Service",
+  "sejiwa_service_description": "Support for suicide prevention",
+  "24_hours": "24 Hours",
+  "call": "Call",
+  "send_message": "Send Message",
+  "need_further_support": "Need Further Support?",
+  "further_support_description": "The Mynd support team is also ready to help you find the right mental health professional and provide guidance on the next steps.",
+  "psychologist": "Psychologist",
+  "psychiatrist": "Psychiatrist",
+  "mh_check_title": "Initial Mental Health Check",
+  "mh_check_intro": "Answer the following questions to get an initial overview of your mental health condition. This process is anonymous and the results are not a medical diagnosis.",
+  "mh_check_question_progress": "Question {{current}} of {{total}}",
+  "mh_check_results_summary": "Here is a summary of your examination results:",
+  "mh_check_why_important": "Why is this Check Important?",
+  "mh_check_why_1": "Helps you become more aware of your current emotional state.",
+  "mh_check_why_2": "Provides an initial step to seek support if needed.",
+  "mh_check_why_3": "Encourages positive self-reflection.",
+  "mh_check_confidentiality": "All information you provide will be kept confidential. These results are not a medical diagnosis.",
+  "start_examination": "Start Examination",
+  "next": "Next",
+  "view_results": "View Results",
+  "back_to_home": "Back to Home",
+  "retake_examination": "Retake Examination",
+  "get_personal_action_plan": "Get Personal Action Plan",
+  "please_select_answer": "Please select an answer to continue.",
+  "toast_great_job": "Great job! Keep going.",
+  "toast_answered_questions": "You have answered {{count}} questions.",
+  "toast_finishing_up": "Finishing up...",
+  "toast_preparing_results": "Preparing your examination results.",
+  "your_examination_results": "Your Examination Results",
+  "score": "Score",
+  "of": "of",
+  "category": "Category",
+  "category_low": "Low",
+  "category_medium": "Medium",
+  "category_high": "High",
+  "category_very_high": "Very High",
+  "additional_notes": "Additional Notes for You:",
+  "ai_analysis_prompt": "Want to get a deeper insight from our AI assistant regarding your results?",
+  "get_ai_analysis": "Get Further AI Analysis",
+  "processing_ai_analysis": "Processing AI Analysis...",
+  "loading_ai_analysis": "Loading analysis from AI, please wait...",
+  "ai_analysis_failed": "Failed to Load AI Analysis",
+  "try_again": "Try again",
+  "ai_additional_analysis": "Additional Analysis from AI Assistant:",
+  "ai_disclaimer": "Please remember: This analysis is generated by AI and is intended to provide additional insight, not as a substitute for professional advice.",
+  "loading": "Loading...",
+  "domain_mood": "Mood & Interest",
+  "domain_anxiety": "Anxiety",
+  "domain_sleep": "Sleep Pattern",
+  "domain_energy": "Energy & Fatigue",
+  "domain_appetite": "Appetite",
+  "domain_concentration": "Concentration",
+  "domain_self_esteem": "Feelings About Yourself",
+  "domain_disturbing_thoughts": "Disturbing Thoughts",
+  "domain_social_functioning": "Social & Work Functioning",
+  "q1_text": "In the last 2 weeks, how often have you felt sad, down, or hopeless?",
+  "q_option_never": "Not at all",
+  "q_option_several_days": "Several days",
+  "q_option_more_than_half": "More than half the days",
+  "q_option_nearly_every_day": "Nearly every day",
+  "q2_text": "In the last 2 weeks, how often have you lost interest or pleasure in doing things you usually enjoy?",
+  "q3_text": "In the last 2 weeks, how often have you felt nervous, anxious, or on edge?",
+  "q4_text": "In the last 2 weeks, how often have you been unable to stop or control worrying?",
+  "q5_text": "In the last 2 weeks, how often have you had trouble sleeping (difficulty falling asleep, waking up often, or sleeping too early)?",
+  "q6_text": "In the last 2 weeks, how often have you felt tired or had little energy?",
+  "q7_text": "In the last 2 weeks, how often have you experienced changes in appetite (decreased or increased)?",
+  "q8_text": "In the last 2 weeks, how often have you had trouble concentrating on things, such as reading the newspaper or watching television?",
+  "q9_text": "In the last 2 weeks, how often have you felt bad about yourself — or that you are a failure or have let yourself or your family down?",
+  "q10_text": "In the last 2 weeks, how often have you been bothered by thoughts that you would be better off dead or of hurting yourself in some way?",
+  "q11_text": "In the last 2 weeks, to what extent have these problems (if any) made it difficult for you to do your work, take care of things at home, or get along with other people?",
+  "q11_option_not_difficult": "Not difficult at all",
+  "q11_option_somewhat_difficult": "Somewhat difficult",
+  "q11_option_quite_difficult": "Quite difficult",
+  "q11_option_very_difficult": "Very difficult",
+  "interp_low": "Your score for {{domain}} is at a low level. This is a positive sign and indicates that this aspect is in good condition at the moment. Maintain the healthy habits that support this condition.",
+  "interp_medium": "You reported some symptoms related to {{domain}} that are at a medium level. This is an area that may require more attention. Try to identify triggers or situations that might be contributing and consider simple coping strategies. If it continues, monitoring your progress can be beneficial.",
+  "interp_high": "Your results show a significant level of {{domain}}. It's important not to ignore this. Considering talking to a trusted friend, family member, or seeking more information from credible sources could be a good first step. If these symptoms interfere with daily activities, consulting a professional is highly recommended.",
+  "interp_very_high_general": "Your score for {{domain}} is at a very high level. This indicates significant distress in this aspect. It is very important to seek support. If you feel very distressed, overwhelmed, or need immediate help, do not hesitate to contact a mental health professional or available emergency support services. You don't have to go through this alone.",
+  "interp_very_high_disturbing": "Your score for Disturbing Thoughts is at a very high level. Thoughts of harming yourself or feeling that you would be better off dead are very serious and require immediate attention. Please do not ignore this. Immediately contact emergency services (e.g., 119 in Indonesia) or a trusted mental health hotline. Professional help is crucial and available for you. You are not alone.",
+  "rule_anxiety_sleep": "We see that your anxiety level is high and your sleep pattern also shows issues. These two are often interconnected. Managing stress and anxiety during the day, as well as creating a calming sleep routine, may help improve your sleep quality.",
+  "rule_mood_energy": "It seems your mood has been low, and this may also be affecting your energy levels. Prolonged feelings of sadness or lack of interest can drain energy. Light physical activity or engaging in a hobby you enjoy, even if it feels difficult, can sometimes help gradually improve both mood and energy.",
+  "rule_social_thoughts": "The difficulties in social and work functioning you are experiencing, combined with very high levels of disturbing thoughts, require serious attention. This combination can be very burdensome. It is crucial to seek professional help immediately to get the right support and coping strategies.",
+  "actionPlan": {
+    "title": "Your Personal Action Plan",
+    "description": "Describe the situation, feelings, or challenges you are facing. The AI will help create a personalized action plan for you.",
+    "assessmentSummaryTitle": "Summary of Your Previous Examination Results",
+    "addDetailsLabel": "Add specific details or focus here:",
+    "describeSituationLabel": "Describe your situation, feelings, or challenges:",
+    "placeholder": "Example: I want to focus on overcoming sleep difficulties and excessive anxiety during office presentations...",
+    "generateButton": "Create Action Plan",
+    "generatingButton": "Creating Plan...",
+    "cancelButton": "Cancel",
+    "yourPlanTitle": "Your Action Plan:",
+    "relatedResourcesTitle": "Related Resources That Might Help:",
+    "errorInputRequired": "Please enter a description of your situation or feelings, or make sure there are previous assessment results.",
+    "errorProcessCancelled": "Process cancelled.",
+    "errorGeneric": "An error occurred while creating the action plan.",
+    "errorPlanCancelled": "Plan creation cancelled.",
+    "assessmentSummaryLabel": "Summary of Previous Assessment Results",
+    "userInputLabel": "User's Additional Input",
+    "resources": {
+      "mindfulnessBreathing": "Mindfulness Breathing Exercise",
+      "progressiveMuscleRelaxation": "Progressive Muscle Relaxation Exercise",
+      "managingAnxietyArticle": "Managing Anxiety Article",
+      "cbtIntroductionArticle": "CBT Introduction Guide"
+    }
+  },
+  "chatbot": {
+    "title": "Mynd Chatbot",
+    "greeting": "Hello! How can I help you today?",
+    "placeholder": "Write your message here...",
+    "typing": "Typing...",
+    "errorMessage": "Sorry, an error occurred. Please try again later.",
+    "errorResponse": "Sorry, I can't respond at the moment."
+  },
+  "mindfulness": {
+    "title": "Mindfulness Breathing Exercise",
+    "subtitle": "Find calm and focus through a simple breathing exercise you can do anywhere, anytime.",
+    "whatIs": {
+      "title": "What is Mindfulness Breathing?",
+      "p1": "Mindfulness breathing is the practice of focusing your full attention on the sensation of your breath in the present moment, without judgment. It's not about changing how you breathe, but rather observing the natural process of your breathing.",
+      "p2": "By training your awareness on the breath, you train your mind to be calmer, more focused, and fully present in the current moment."
+    },
+    "benefits": {
+      "title": "Benefits of This Exercise",
+      "b1": "Reduces stress and anxiety.",
+      "b2": "Improves focus and concentration.",
+      "b3": "Helps calm the nervous system.",
+      "b4": "Increases self-awareness.",
+      "b5": "Can help improve sleep quality."
+    },
+    "steps": {
+      "title": "Exercise Steps",
+      "subtitle": "Follow these simple steps to get started.",
+      "stepLabel": "Step {{step}}",
+      "1": {
+        "title": "Find a Comfortable Position",
+        "description": "Sit comfortably in a chair with your back straight but shoulders relaxed. You can also lie down if that's more comfortable. Make sure you won't be disturbed for a few minutes."
+      },
+      "2": {
+        "title": "Close Your Eyes (Optional)",
+        "description": "Gently close your eyes. If you're not comfortable closing them, just gently lower your gaze downwards, about a meter in front of you, without focusing on anything."
+      },
+      "3": {
+        "title": "Observe Your Breath",
+        "description": "Turn your attention to your breath. Feel the sensation of the air entering and leaving your body. Notice where you feel the breath most: maybe in your nostrils, throat, chest, or abdomen."
+      },
+      "4": {
+        "title": "Don't Change, Just Observe",
+        "description": "There's no need to change the way you breathe. Let the breath flow naturally. Your only task is to observe, to be a witness to each inhale and exhale."
+      },
+      "5": {
+        "title": "Return When the Mind Wanders",
+        "description": "Your mind will inevitably wander – this is completely normal. When you notice your mind is no longer on your breath, acknowledge where it went, and then gently guide your attention back to the sensation of breathing."
+      },
+      "6": {
+        "title": "Continue for a Few Minutes",
+        "description": "Start with 3-5 minutes. You can use a timer if you like. Over time, you can increase the duration if you feel comfortable."
+      },
+      "7": {
+        "title": "End Gently",
+        "description": "When you're done, take a moment to notice how your body and mind feel. Slowly open your eyes (if they were closed) and carry this awareness into your next activity."
+      }
+    },
+    "tips": {
+      "title": "Additional Tips",
+      "t1": "**Consistency is key.** It's better to practice for a few minutes every day than for a long time but infrequently.",
+      "t2": "**Be gentle with yourself.** There is no 'wrong way' to be mindful. The learning process is part of it.",
+      "t3": "You can do this exercise **anytime** you feel you need a break or are feeling stressed."
+    }
+  },
+  "pmr": {
+    "title": "Progressive Muscle Relaxation (PMR) Exercise",
+    "subtitle": "Release physical and mental tension with the structured progressive muscle relaxation technique.",
+    "whatIs": {
+      "title": "What is Progressive Muscle Relaxation?",
+      "p1": "Progressive Muscle Relaxation (PMR) is a deep relaxation technique developed by Dr. Edmund Jacobson in the early 20th century. This technique involves a systematic process of tensing specific muscle groups in your body, holding the tension for a moment, and then releasing it.",
+      "p2": "By focusing on the difference in sensation between tension and relaxation, you learn to become more aware of and release physical tension you often don't notice, which in turn can help calm the mind."
+    },
+    "benefits": {
+      "title": "Benefits of PMR Exercise",
+      "b1": "Reduces chronic muscle tension.",
+      "b2": "Helps with insomnia and improves sleep quality.",
+      "b3": "Lowers symptoms of anxiety and stress.",
+      "b4": "May help reduce certain types of pain (e.g., tension headaches).",
+      "b5": "Increases body awareness."
+    },
+    "guide": {
+      "title": "Progressive Muscle Relaxation Exercise Guide",
+      "subtitle": "Follow this sequence, focusing on each muscle group."
+    },
+    "preparation": {
+      "title": "Preparation Before Starting",
+      "p1": "Find a quiet and comfortable place where you won't be disturbed for 15-20 minutes.",
+      "p2": "Wear loose and comfortable clothing.",
+      "p3": "You can sit in a chair that supports your back or lie down.",
+      "p4": "Remove your glasses or contact lenses if you wear them.",
+      "p5": "Take a few deep, slow breaths to begin."
+    },
+    "groups": {
+      "label": "Muscle Group {{index}}",
+      "focus": "Focus on the difference in sensation between tense and relaxed.",
+      "hands": {
+        "name": "Hands and Forearms",
+        "instruction": "Clench your fists as tightly as you can for 5-7 seconds, feel the tension. Then, release slowly for 10-15 seconds, feeling the relaxation."
+      },
+      "upperArms": {
+        "name": "Upper Arms (Biceps)",
+        "instruction": "Flex your arms and tense your biceps (like lifting weights) for 5-7 seconds. Release slowly."
+      },
+      "forehead": {
+        "name": "Forehead",
+        "instruction": "Raise your eyebrows as high as possible, hold for 5-7 seconds. Release slowly."
+      },
+      "eyes": {
+        "name": "Eyes and Cheeks",
+        "instruction": "Squeeze your eyes shut as tightly as possible and wrinkle your cheeks for 5-7 seconds. Release slowly."
+      },
+      "mouth": {
+        "name": "Mouth and Jaw",
+        "instruction": "Open your mouth as wide as possible, or clench your jaw tightly (choose one) for 5-7 seconds. Release slowly."
+      },
+      "neck": {
+        "name": "Neck and Shoulders",
+        "instruction": "Shrug your shoulders up towards your ears as high as possible, hold for 5-7 seconds. Release slowly. Alternatively, tuck your chin to your chest, feeling the stretch in the back of your neck."
+      },
+      "chest": {
+        "name": "Chest",
+        "instruction": "Take a deep breath and hold it, feeling the tension in your chest for 5-7 seconds. Exhale slowly and release the tension."
+      },
+      "stomach": {
+        "name": "Stomach",
+        "instruction": "Pull your stomach in as tightly as you can, hold for 5-7 seconds. Release slowly."
+      },
+      "back": {
+        "name": "Back",
+        "instruction": "Arch your back slightly (if comfortable), hold for 5-7 seconds. Release slowly."
+      },
+      "thighs": {
+        "name": "Thighs",
+        "instruction": "Tighten your thigh muscles as hard as you can for 5-7 seconds. Release slowly."
+      },
+      "calves": {
+        "name": "Calves",
+        "instruction": "Point your toes upwards (towards your knees) to tense your calf muscles, hold for 5-7 seconds. Release slowly."
+      },
+      "feet": {
+        "name": "Feet and Toes",
+        "instruction": "Curl your toes downwards as tightly as possible, hold for 5-7 seconds. Release slowly."
+      }
+    },
+    "after": {
+      "title": "After Finishing",
+      "description": "After completing all muscle groups, enjoy the feeling of total relaxation for a few minutes. Notice how your body feels lighter and your mind calmer. Open your eyes slowly and return to your activities feeling refreshed."
+    },
+    "tips": {
+      "title": "Important Tips",
+      "t1": "Don't hold your breath while tensing muscles; continue to breathe normally.",
+      "t2": "Tense the muscles just enough, not to the point of pain.",
+      "t3": "If you have any medical conditions or injuries, consult a doctor before trying this exercise.",
+      "t4": "Practice regularly to get the maximum benefit."
+    },
+    "warning": {
+      "title": "Caution",
+      "description": "This exercise is intended for general relaxation. If you experience chronic pain, severe tension, or other medical conditions, always consult with a healthcare professional before starting a new exercise program."
+    }
+  },
+  "anxietyArticle": {
+    "title": "Managing Anxiety: A Guide to Peace of Mind",
+    "subtitle": "Understand what anxiety is, recognize its symptoms, and learn effective strategies to manage it in daily life.",
+    "understanding": {
+      "title": "Understanding Anxiety",
+      "p1": "Anxiety is the body's natural response to stress or potential danger. It's an emotion characterized by feelings of tension, worried thoughts, and physical changes like increased heart rate or sweating. To a certain extent, anxiety can be beneficial, for example, motivating us to prepare for an exam or an important presentation.",
+      "p2": "However, when feelings of anxiety become excessive, occur too frequently, or are disproportionate to the situation, it can interfere with quality of life and be categorized as an anxiety disorder. It's important to recognize the difference."
+    },
+    "symptoms": {
+      "title": "Recognizing the Symptoms of Anxiety",
+      "description": "Anxiety symptoms can vary from person to person, but they generally include physical, cognitive, and behavioral aspects.",
+      "physical": {
+        "title": "Physical Symptoms:",
+        "s1": "Rapid or pounding heartbeat",
+        "s2": "Shortness of breath or gasping",
+        "s3": "Dizziness or a light-headed sensation",
+        "s4": "Dry mouth, nausea, or digestive issues",
+        "s5": "Trembling or sweating",
+        "s6": "Muscle tension or headaches",
+        "s7": "Fatigue"
+      },
+      "cognitive": {
+        "title": "Cognitive Symptoms:",
+        "s1": "Excessive worry about the past, present, or future",
+        "s2": "Negative or pessimistic thoughts that are hard to control",
+        "s3": "Difficulty concentrating or mind going blank",
+        "s4": "Feeling like you're about to lose control or go crazy",
+        "s5": "Fear of judgment from others"
+      },
+      "behavioral": {
+        "title": "Behavioral Symptoms:",
+        "s1": "Avoiding situations that trigger anxiety",
+        "s2": "Restless behaviors (e.g., pacing, nail-biting)",
+        "s3": "Irritability or being easily angered",
+        "s4": "Difficulty sleeping",
+        "s5": "Repeatedly seeking reassurance"
+      }
+    },
+    "strategies": {
+      "title": "Strategies for Managing Anxiety",
+      "relaxation": {
+        "title": "Relaxation Techniques",
+        "p1": "Exercises like ",
+        "link1": "mindfulness breathing",
+        "p2": " or ",
+        "link2": "progressive muscle relaxation",
+        "p3": " can help calm the physical response to anxiety."
+      },
+      "mindset": {
+        "title": "Healthy Mindset (CBT Basics)",
+        "p1": "Identify and challenge negative or unrealistic thoughts that trigger anxiety. Replace them with more balanced and positive thoughts. Learn more about the ",
+    "link1": "basics of CBT"
+      },
+      "lifestyle": {
+        "title": "Healthy Lifestyle",
+        "l1": "Regular exercise can release endorphins and reduce tension.",
+        "l2": "Sufficient and quality sleep is crucial for mental health.",
+        "l3": "Eat a balanced, nutritious diet and limit caffeine and alcohol."
+      },
+      "social": {
+        "title": "Seek Social Support",
+        "p1": "Talking to friends, family, or joining a support group can help you feel less alone and gain new perspectives."
+      }
+    },
+    "professionalHelp": {
+      "title": "When to Seek Professional Help?",
+      "description": "If your anxiety is severe, long-lasting, significantly disrupts your daily activities, or if you start having thoughts of self-harm, it is crucial to seek help immediately from a mental health professional such as a psychologist or psychiatrist. They can provide a proper diagnosis and a suitable treatment plan."
+    }
+  },
+  "edukasi": {
+    "title": "Mental Health Education Videos",
+    "description": "Welcome to our education page. Here you will find a collection of informative and supportive videos designed to help you understand more about mental health, stress management strategies, and various techniques to improve your emotional well-being. We believe that knowledge is the first step towards positive change. Watch our selected videos to start your journey towards a healthier mind.",
+    "video1": { "title": "Education Video 1" },
+    "video2": { "title": "Education Video 2" },
+    "video3": { "title": "Education Video 3" },
+    "video4": { "title": "Education Video 4" },
+    "video5": { "title": "Education Video 5" },
+    "video6": { "title": "Education Video 6" }
+  },
+  "cbtArticle": {
+    "title": "Introduction to Cognitive Behavioral Therapy (CBT)",
+    "subtitle": "Understand the basics of CBT, how it works, and how it can help you change your thought patterns and behaviors.",
+    "whatIs": {
+      "title": "What is Cognitive Behavioral Therapy (CBT)?",
+      "p1": "Cognitive Behavioral Therapy (CBT) is a type of psychological therapy (psychotherapy) that has been proven effective for a variety of mental health issues, including depression, anxiety disorders, substance use problems, eating disorders, and relationship problems.",
+      "p2": "CBT is based on the idea that our thoughts, feelings, physical sensations, and actions are interconnected. Negative thoughts and feelings can trap us in a vicious cycle. CBT aims to help you break this cycle by identifying and changing negative or unhelpful thinking patterns (cognitions) and behaviors."
+    },
+    "principles": {
+      "title": "Core Principles of CBT",
+      "p1": "**Focus on the Present:** CBT focuses more on present-day problems and solutions rather than extensively digging into the past.",
+      "p2": "**Structured and Goal-Oriented:** CBT sessions are typically structured, with a clear agenda and goals agreed upon by both the therapist and client.",
+      "p3": "**Collaborative:** The therapist and client work together as a team to understand problems and develop strategies.",
+      "p4": "**Teaches Skills:** CBT aims to equip you with practical skills that you can use in your daily life to cope with challenges.",
+      "p5": "**Evidence-Based:** The effectiveness of CBT is supported by a large body of scientific research."
+    },
+    "howItWorks": {
+      "title": "How CBT Works: The Cognitive Model",
+      "p1": "CBT is based on the cognitive model, which posits that it's not the situation itself that determines how we feel, but rather how we interpret or think about the situation.",
+      "model": "Situation → Automatic Thought → Reaction (Emotion, Behavior, Physical Sensation)",
+      "example": "For example: Imagine you weren't invited to an event by a friend.",
+      "thoughtLabel": "Negative Automatic Thought",
+      "thought": "\"They don't like me,\" \"I must be boring.\"",
+      "emotionLabel": "Resulting Emotion",
+      "emotion": "Sadness, anxiety, anger.",
+      "behaviorLabel": "Behavior",
+      "behavior": "Withdrawing, not contacting the friend.",
+      "sensationLabel": "Physical Sensation",
+      "sensation": "Upset stomach, tightness in chest.",
+      "p2": "CBT helps you identify these negative automatic thoughts, evaluate their accuracy, and replace them with more realistic and helpful ones.",
+      "altThoughtLabel": "Example of an Alternative Thought:",
+      "altThought": "\"Maybe they forgot, or it was just a small group event. I can ask them about it nicely or plan something else with them another time.\""
+    },
+    "issues": {
+      "title": "Issues CBT Can Help With",
+      "p1": "CBT is effective for a wide range of conditions, including:",
+      "i1": "Depression",
+      "i2": "Generalized Anxiety Disorder (GAD)",
+      "i3": "Panic Disorder",
+      "i4": "Phobias (e.g., social phobia, agoraphobia)",
+      "i5": "Post-Traumatic Stress Disorder (PTSD)",
+      "i6": "Obsessive-Compulsive Disorder (OCD)",
+      "i7": "Eating Disorders",
+      "i8": "Sleep Problems (Insomnia)",
+      "i9": "Stress Management",
+      "i10": "Relationship Problems",
+      "i11": "Anger Management",
+      "i12": "Chronic Pain"
+    },
+    "techniques": {
+      "title": "Simple CBT Techniques",
+      "p1": "Here are some basic techniques often used in CBT:",
+      "t1": {
+        "title": "1. Thought Record",
+        "description": "Writing down a situation, the automatic thoughts that arise, the emotions felt, and then trying to formulate a more balanced, alternative response."
+      },
+      "t2": {
+        "title": "2. Cognitive Restructuring",
+        "description": "Identifying cognitive distortions (inaccurate negative thought patterns, like overgeneralization or catastrophizing) and learning to challenge and change them."
+      },
+      "t3": {
+        "title": "3. Behavioral Activation",
+        "description": "Encouraging participation in activities that are enjoyable or provide a sense of accomplishment, especially to combat depression and withdrawal."
+      },
+      "t4": {
+        "title": "4. Graded Exposure",
+        "description": "Gradually and systematically confronting feared situations or objects to reduce anxiety and phobias."
+      }
+    },
+    "journey": {
+      "title": "CBT is a Collaborative Journey",
+      "description": "While this article provides an introduction, CBT is most effective when done with the guidance of a trained therapist. A therapist can help you apply these techniques in a personalized and in-depth way. If you feel you need support, don't hesitate to seek a professional."
+    }
+  }
+}

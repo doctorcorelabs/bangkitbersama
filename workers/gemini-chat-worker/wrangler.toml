@@ -7,7 +7,7 @@ compatibility_date = "2023-10-30" # Or a more recent date, check Cloudflare docs
 # For local development, use .dev.vars
 
 # Optional: If you need to specify a specific Node.js version
-# node_compat = true
+node_compat = true
 
 # Rules for how different file types should be treated by the bundler
 [[rules]]

@@ -1,11 +1,12 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogClose } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Paperclip, SendHorizonal, Bot as BotIcon, User as UserIcon } from "lucide-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { SendHorizonal, Bot as BotIcon, User as UserIcon } from "lucide-react";
 import React, { useState, useEffect, useRef, FormEvent } from "react";
-import ReactMarkdown from 'react-markdown'; // Import ReactMarkdown
+import ReactMarkdown from 'react-markdown';
+import { useTranslation } from "react-i18next";
 
 interface Message {
   id: string;
@@ -24,6 +25,7 @@ const WORKER_URL = "https://gemini-chat-worker.daivanfebrijuansetiya.workers.dev
 // Or your local dev URL e.g., http://localhost:8787
 
 const ChatbotUI: React.FC<ChatbotUIProps> = ({ isChatOpen, onChatClose }) => {
+  const { t, i18n } = useTranslation();
   const [messages, setMessages] = useState<Message[]>([]);
   const [userInput, setUserInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -32,16 +34,14 @@ const ChatbotUI: React.FC<ChatbotUIProps> = ({ isChatOpen, onChatClose }) => {
 
   useEffect(() => {
     if (isChatOpen) {
-      // Focus input when chat opens
       setTimeout(() => inputRef.current?.focus(), 100);
-      // Greet user or load history if needed
       if (messages.length === 0) {
         setMessages([
-          { id: "greet", text: "Halo! Ada yang bisa saya bantu hari ini?", sender: "bot", timestamp: new Date() }
+          { id: "greet", text: t('chatbot.greeting'), sender: "bot", timestamp: new Date() }
         ]);
       }
     }
-  }, [isChatOpen]);
+  }, [isChatOpen, t, messages.length]);
 
   useEffect(() => {
     // Scroll to bottom when new messages are added
@@ -77,7 +77,10 @@ const ChatbotUI: React.FC<ChatbotUIProps> = ({ isChatOpen, onChatClose }) => {
       const response = await fetch(WORKER_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: trimmedInput, history: chatHistory }),
+        body: JSON.stringify({ 
+          message: trimmedInput, 
+          history: chatHistory
+        }),
       });
 
       if (!response.ok || !response.body) {
@@ -120,7 +123,7 @@ const ChatbotUI: React.FC<ChatbotUIProps> = ({ isChatOpen, onChatClose }) => {
       // Final update to ensure the full message is set if it ended mid-stream
       setMessages((prev) =>
         prev.map((msg) =>
-          msg.id === botMessageId ? { ...msg, text: botMessageText || "Maaf, saya tidak bisa merespon saat ini." } : msg
+          msg.id === botMessageId ? { ...msg, text: botMessageText || t('chatbot.errorResponse') } : msg
         )
       );
 
@@ -128,7 +131,7 @@ const ChatbotUI: React.FC<ChatbotUIProps> = ({ isChatOpen, onChatClose }) => {
       console.error("Error sending message:", error);
       setMessages((prev) => [
         ...prev,
-        { id: Date.now().toString(), text: "Maaf, terjadi kesalahan. Coba lagi nanti.", sender: "bot", timestamp: new Date() },
+        { id: Date.now().toString(), text: t('chatbot.errorMessage'), sender: "bot", timestamp: new Date() },
       ]);
     } finally {
       setIsLoading(false);
@@ -142,7 +145,7 @@ const ChatbotUI: React.FC<ChatbotUIProps> = ({ isChatOpen, onChatClose }) => {
         <DialogHeader className="p-4 border-b">
           <DialogTitle className="flex items-center space-x-2">
             <BotIcon className="w-6 h-6 text-primary" />
-            <span>Chatbot BangkitBersama</span>
+            <span>{t('chatbot.title')}</span>
           </DialogTitle>
         </DialogHeader>
 
@@ -193,7 +196,7 @@ const ChatbotUI: React.FC<ChatbotUIProps> = ({ isChatOpen, onChatClose }) => {
                     <AvatarFallback><BotIcon size={18}/></AvatarFallback>
                   </Avatar>
                   <div className="max-w-[70%] p-3 rounded-lg shadow-sm bg-muted text-muted-foreground">
-                    <p className="text-sm animate-pulse">Mengetik...</p>
+                    <p className="text-sm animate-pulse">{t('chatbot.typing')}</p>
                   </div>
               </div>
             )}
@@ -209,7 +212,7 @@ const ChatbotUI: React.FC<ChatbotUIProps> = ({ isChatOpen, onChatClose }) => {
               ref={inputRef}
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
-              placeholder="Tulis pesan Anda di sini..."
+              placeholder={t('chatbot.placeholder')}
               className="flex-grow"
               disabled={isLoading}
               onKeyPress={(e) => {
